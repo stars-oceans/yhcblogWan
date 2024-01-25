@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>yhc</title>
+        <link>https://appbeebee.com</link>
+        <description>前端技术分享博客</description>
+        <lastBuildDate>Thu, 25 Jan 2024 07:52:29 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh</language>
+        <image>
+            <title>yhc</title>
+            <url>https://appbeebee.com/logo.png</url>
+            <link>https://appbeebee.com</link>
+        </image>
+        <copyright>Copyright © 2023-2024 yhc</copyright>
+        <item>
+            <title><![CDATA[yhc博客开源源码-基于vitepress的资源下载博客主题，速度杠杠快]]></title>
+            <link>https://appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html</link>
+            <guid>https://appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html</guid>
+            <pubDate>Sun, 21 Jan 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hm1ie2tg0ej20k00dcwkd.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="yhc博客开源源码-基于vitepress的资源下载博客主题-速度杠杠快" tabindex="-1">yhc博客开源源码-基于vitepress的资源下载博客主题，速度杠杠快 <a class="header-anchor" href="#yhc博客开源源码-基于vitepress的资源下载博客主题-速度杠杠快" aria-label="Permalink to &quot;yhc博客开源源码-基于vitepress的资源下载博客主题，速度杠杠快&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="主题介绍" tabindex="-1">主题介绍 <a class="header-anchor" href="#主题介绍" aria-label="Permalink to &quot;主题介绍&quot;">&ZeroWidthSpace;</a></h2>
+<ArticleCarousel :list="list" /><p>这是一款基于 vitepress 打造的适合图文资源分享的博客主题。不改动原有布局的大方向的基础上，做了列表和一些视觉上的调整。这款主题更加适合设计或者开发人员进行资源的整理和分享。</p>
+<p>我选择 vitepress就是因为它的速度够快，加上部署到vercel免费无需服务器，整体来说经济实惠又好用，值得大家使用。</p>
+<h2 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li>构建速度超级快，比 vuepress快 100 倍，尤其文章内容特别多时，构建速度特别明显</li>
+<li>支持 github+vercel进行快速部署，省去搭建服务器费用</li>
+<li>vitepress具备完善的文档、社区支持，迭代使用放心</li>
+<li>本项目在 vitepress默认主题基础上完成改造的功能
+<ol>
+<li>基于路由实现标签、分类、存档、分页功能。方便用户通过页面域名进行分页或者相关内容的查看；</li>
+<li>存档实现年和年+月的形式；</li>
+<li>文章列表分为宫格和列表两种样式，方便用户根据喜好切换；</li>
+<li>内页增加标签、分类面包屑导航等；</li>
+<li>增加阅读时长等常用功能；</li>
+<li>文章内增加一个资源汇总组件。方便资源的出处跳转、 github资源数据获取等；</li>
+<li>Feed订阅</li>
+<li>根据标签获取相关文章</li>
+<li>一个工具导航页面</li>
+<li>一个关于页面</li>
+</ol>
+</li>
+<li>本项目在 vitepress上基于 vue3+TS实现的一些小特效
+<ol>
+<li>文章列表可嵌入一个博主卡片，可配置是否显示</li>
+<li>博主卡片可配置选择放置音乐播放和打赏咖啡</li>
+<li>背景音乐可配置音乐清单</li>
+<li>打赏咖啡可配置一个二维码图片</li>
+<li>音乐播放器基于pinia管理播放状态</li>
+<li>一个春节灯笼挂件，可配置灯笼文字以及是否显示</li>
+<li>侧栏一个烟花许愿挂件，可配置标题、内容以及是否显示等</li>
+<li>暗黑模式下可配置雪花特效</li>
+</ol>
+</li>
+<li>本项目在 vitepress上并入的第三方组件，完美支持运行
+<ol>
+<li>轮播组件</li>
+<li>提示组件</li>
+<li>弹层组件</li>
+<li>消息框组件</li>
+<li>VueUse 复制文本、缓存</li>
+<li>pinia状态管理</li>
+<li>时间友好化组件</li>
+</ol>
+</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'shiheme/appbeebee',
+    view: 'https://appbeebee.com/',
+    github: 'shiheme/appbeebee',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="安装" tabindex="-1">安装 <a class="header-anchor" href="#安装" aria-label="Permalink to &quot;安装&quot;">&ZeroWidthSpace;</a></h2>
+<p>克隆项目或者直接前往 github仓库页面下载 zip包</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> clone https://github.com/shiheme/appbeebee.git</span></span></code></pre>
+</div><p>转到项目目录，安装依赖</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> appbeebee</span></span></code></pre>
+</div><p>通过 yarn</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span></span></code></pre>
+</div><p>通过 npm</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span></span></code></pre>
+</div><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hm1ie2tg0ej20k00dcwkd.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体]]></title>
+            <link>https://appbeebee.com/posts/2024/01/freebie-chinese-font.html</link>
+            <guid>https://appbeebee.com/posts/2024/01/freebie-chinese-font.html</guid>
+            <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxgepmlgvj20k00dctkd.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2024/01/freebie-chinese-font.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体" tabindex="-1">7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体 <a class="header-anchor" href="#_7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体" aria-label="Permalink to &quot;7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-华为harmonyos-sans-字体" tabindex="-1">1.华为HarmonyOS Sans 字体 <a class="header-anchor" href="#_1-华为harmonyos-sans-字体" aria-label="Permalink to &quot;1.华为HarmonyOS Sans 字体&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg" alt="HarmonyOS Sans 字体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxg5ko45cj21z42x8alh.jpg" alt="HarmonyOS Sans 字体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxg5x3mh3j24js2gohdt.jpg" alt="HarmonyOS Sans 字体" data-fancybox="gallery"></p>
+<p>华为设计师通过研究用户在不同场景下对多终端设备的阅读反馈，综合考量不同设备的尺寸、使用场景等因素，同时也考虑用户使用设备时因视距、视角的差异带来的字体大小和字重的不同诉求，为 HarmonyOS 设计了全新系统默认的字体——HarmonyOS Sans</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>全新字体笔画设计。在保障字体体验的功能性前提下，我们在人文和现代中找到新的平衡。在短笔画时保持横平竖直，简约无装饰，撇捺弯钩长笔画中融入书法的笔势美学，带来全新的视觉感受。</li>
+<li>优化字体灰度，提升阅读体验。在不同设备的应用场景下，字体的灰度会影响在弱光环境、小字号、远距离下的识别性。因此我们优化字体的灰度，让新字体在不同场景下具有更好的识别性和阅读体验。</li>
+<li>统一多语言字形风格。我们重新设计了中文、拉丁文、希利尔文、希腊文、阿拉伯文的字形样式，支持100+语言，让多语言下阅读体验更加一致。</li>
+<li>动态字重粗细调节。HarmonyOS Sans支持可变特性，让用户选择他们喜欢的字体粗细来进行文本的显示。</li>
+<li>支持更多字重能力。HarmonyOS Sans增加了Thin、Light、Bold、Black的字重能力，开发者可以选择需要的字重来构建界面的信息层级。</li>
+<li>等宽与变宽数字字体。HarmonyOS Sans支持变宽和等宽两种样式。文本混排中使用系统默认的变宽数字，在阅读文本段落中能让阅读体验更加连贯。而等宽时钟数字在需要强调数值以及数据需要经常变化的表格和时钟数字的场景中使用时，可以保持数字字宽的对齐，同时更具图形化的呈现可以在界面中脱颖而出。</li>
+<li>支持时钟字体特性。HarmonyOS Sans支持时钟字体特性，冒号格式会根据时间格式自动调整位置。</li>
+</ol>
+<p>版权声明：105种语言免费使用，不可修改，不可二次分发<a href="https://developer.harmonyos.com/cn/harmonyos_design" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '华为HarmonyOS Sans 字体',
+    view: 'https://developer.huawei.com/images/download/general/HarmonyOS-Sans.zip',
+    github: '',
+    via: 'https://developer.huawei.com/consumer/cn/design/resource/',
+    linkpan:'https://pan.baidu.com/s/1hKUr4vMbO-Twvim0-k40pg?pwd=uyv3',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_2-小米misans-miui13全新系统字体" tabindex="-1">2. 小米MiSans MIUI13全新系统字体 <a class="header-anchor" href="#_2-小米misans-miui13全新系统字体" aria-label="Permalink to &quot;2. 小米MiSans MIUI13全新系统字体&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxf9huh9yj21r00zgdt2.jpg" alt="MiSans MIUI13全新系统字体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfa0fvznj21r00zgwmn.jpg" alt="MiSans MIUI13全新系统字体" data-fancybox="gallery"></p>
+<p>小米出品的全新免费商用字体，也是 MIUI 13 上搭载的全新系统字体</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>笔型平直有力，设计更加简约，减少视觉负担，更有利于屏幕显示。</li>
+<li>共包含29,093个字符，支持多种语言。</li>
+<li>MiSans 提供了多种 OpenType 功能，可根据特定需求来选择不同形态的字符，例如某些标点符号可以根据周围字母的形态自动调整至合适的位置。</li>
+<li>MiSans字重齐全，层级清晰，10个字重全部开放下载，供全社会免费商用。</li>
+</ol>
+<p>版权声明：10个字重全部开放下载，供全社会免费商用<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=33935854" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: 'MiSans MIUI13全新系统字体',
+    view: 'https://cdn.cnbj1.fds.api.mi-img.com/vipmlmodel/font/MiSans/MiSans.zip',
+    github: '',
+    via: 'https://web.vip.miui.com/page/info/mio/mio/detail?postId=33935854',
+    linkpan:'https://pan.baidu.com/s/19nH3jV6wKKRF_6ikLRhNPA?pwd=4kde',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_3-抖音美好体" tabindex="-1">3.抖音美好体 <a class="header-anchor" href="#_3-抖音美好体" aria-label="Permalink to &quot;3.抖音美好体&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfb8gpnuj20u00gwgmd.jpg" alt="抖音美好体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfcw3vtrj20u00gvq3v.jpg" alt="抖音美好体" data-fancybox="gallery"></p>
+<p>为了更好地传播“记录美好生活”的品牌理念，更好地满足品牌长远发展，打造优质的内容创作与产品体验，抖音体验设计中心与方正字库联合设计开发了一款简洁大方、清晰易读，同时兼具现代气质与人文属性的品牌定制字体——抖音美好体。</p>
+<h4 id="特征-2" tabindex="-1">特征 <a class="header-anchor" href="#特征-2" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>美好体通过字体骨架搭建、笔画细节设计等细节，塑造出“沉稳内敛、自然舒适”的字体性格</li>
+<li>将传统书法文化中的书写感、流畅感与现代字体设计相结合，借鉴了行书中连笔书写一气呵成的精髓，形成独特的连笔设计</li>
+<li>搭配了具有几何风格的西文字符，字形简洁干练、现代时尚，同时在细节上延续了中文的圆弧及横笔画斜切的特征</li>
+<li>将西文及数字字符拓展至5种不同粗细、宽窄，提升了字体与产品场景的适配度</li>
+<li>包含6763个中文字符，682个西文及数字符号，执行国家GB2312-80简体中文编码字符标准</li>
+</ol>
+<p>版权声明：面向全社会开源（OFL协议），个人、企业、商家均可免费商用<a href="https://mp.weixin.qq.com/s/_Q_V3vR1nXJfM__GLYY4ZQ" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '抖音美好体',
+    view: 'https://mp.weixin.qq.com/s/_Q_V3vR1nXJfM__GLYY4ZQ',
+    github: '',
+    via: 'https://mp.weixin.qq.com/s/_Q_V3vR1nXJfM__GLYY4ZQ',
+    linkpan:'https://pan.baidu.com/s/1pCuW4irPGNeVJhPiqWZZpg?pwd=tt8m',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_4-阿里妈妈智造体-4-款中文" tabindex="-1">4.阿里妈妈智造体（4 款中文） <a class="header-anchor" href="#_4-阿里妈妈智造体-4-款中文" aria-label="Permalink to &quot;4.阿里妈妈智造体（4 款中文）&quot;">&ZeroWidthSpace;</a></h2>
+<p>阿里妈妈·智造字由淘宝（中国）软件有限公司出品，目前共包含阿里妈妈刀隶体、阿里妈妈方圆体、阿里妈妈灵动体、阿里妈妈东方大楷、阿里妈妈数黑体五款，其中阿里妈妈灵动体为西文，另外 4 款均支持中文。</p>
+<h3 id="_4-1-阿里妈妈刀隶体" tabindex="-1">4.1 阿里妈妈刀隶体 <a class="header-anchor" href="#_4-1-阿里妈妈刀隶体" aria-label="Permalink to &quot;4.1 阿里妈妈刀隶体&quot;">&ZeroWidthSpace;</a></h3>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfdf47t4g21hc0ty7wk.jpg" alt="阿里妈妈刀隶体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxff0v41oj21jk0rd44n.jpg" alt="阿里妈妈刀隶体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfji4pxrj21jk1357na.jpg" alt="阿里妈妈刀隶体" data-fancybox="gallery"></p>
+<p>阿里妈妈刀隶体为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6763个汉字；英文大小写共52个；常用标点符号共227个，总计 7042 个字符。</p>
+<h4 id="特征-3" tabindex="-1">特征 <a class="header-anchor" href="#特征-3" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>阿里妈妈刀隶体，通过机器学习了爨宝子碑的精髓，强调了三角点折弯与横画两端“雁尾”之方强，</li>
+<li>外露锋芒，耀其精神，介于隶楷之间，保持着浓重的隶书方笔意味，给人以坚实、朴茂、稚拙、倔犟之感，</li>
+<li>打破常规常态的匀称均衡，结字极为大胆，大小常常出人意料，看似失度，实则深得艺理，险中求正，静中寓动，动中求静。</li>
+</ol>
+<p>版权声明：用户可基于合法目的用于商业用途或非商业用途，以及嵌入式使用<a href="https://www.iconfont.cn/fonts/detail?cnid=1ntUmJ7Q4Jhw" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '阿里妈妈刀隶体',
+    view: 'https://www.iconfont.cn/fonts/detail?cnid=1ntUmJ7Q4Jhw',
+    github: '',
+    via: 'https://www.iconfont.cn/fonts/detail?cnid=1ntUmJ7Q4Jhw',
+    linkpan:'https://pan.baidu.com/s/1TqN7YQXjHJ-nRSzGzKqkeQ?pwd=fvyj',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h3 id="_4-2-阿里妈妈方圆体" tabindex="-1">4.2 阿里妈妈方圆体 <a class="header-anchor" href="#_4-2-阿里妈妈方圆体" aria-label="Permalink to &quot;4.2 阿里妈妈方圆体&quot;">&ZeroWidthSpace;</a></h3>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfksel73j21jk0rdwki.jpg" alt="阿里妈妈方圆体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfl3h18xj21jk0rt7c0.jpg" alt="阿里妈妈方圆体" data-fancybox="gallery"></p>
+<p>阿里妈妈方圆体为一款简体中文双轴可变字体，收纳的中文字符包括但不限于 GB2312，共计6763个汉字；英文大小写共52个；常用标点符号共227个，总计7042个字符</p>
+<h4 id="特征-4" tabindex="-1">特征 <a class="header-anchor" href="#特征-4" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>通过智能 AI 的方式在 20 天内完成的这款字，是目前国内外为数不多的中文双轴可变字体。</li>
+<li>方体坚实而硬朗，圆体润泽而柔美；</li>
+<li>方圆间的切换让方圆体极具适用性，也解放了创意表达的更多可能性。</li>
+<li>粗细的可变使得设计师具备无限微调的可能，让创意设计有了丰富表达。</li>
+</ol>
+<p>版权声明：用户可基于合法目的用于商业用途或非商业用途，以及嵌入式使用<a href="https://www.iconfont.cn/fonts/detail?cnid=pOvFIr086ADR" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '阿里妈妈方圆体',
+    view: 'https://www.iconfont.cn/fonts/detail?cnid=pOvFIr086ADR',
+    github: '',
+    via: 'https://www.iconfont.cn/fonts/detail?cnid=pOvFIr086ADR',
+    linkpan:'https://pan.baidu.com/s/13CNx20WJK6g5AACPAGtPvQ?pwd=dnu3',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h3 id="_4-3-阿里妈妈东方大楷" tabindex="-1">4.3 阿里妈妈东方大楷 <a class="header-anchor" href="#_4-3-阿里妈妈东方大楷" aria-label="Permalink to &quot;4.3 阿里妈妈东方大楷&quot;">&ZeroWidthSpace;</a></h3>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfoh3budj21sg2mbe81.jpg" alt="阿里妈妈东方大楷" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfos5qu6j20y10nvtze.jpg" alt="阿里妈妈东方大楷" data-fancybox="gallery"></p>
+<p>阿里妈妈东方大楷为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6763个汉字；英文大小写（含全角、半角、合体字等）共105个；常用标点符号共175个，总计7043个字符。</p>
+<h4 id="特征-5" tabindex="-1">特征 <a class="header-anchor" href="#特征-5" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>阿里妈妈东方大楷是基于颜真卿的多宝塔碑算法生成并结合人力完成的一套字库，</li>
+<li>机器学习到了颜体的丰腴厚重之感，在笔画的描摹上做到了传统书法的收放起伏，</li>
+<li>规范了骨架、笔画，还原了书法中的落笔、转笔、藏锋、护尾等书写韵味，使整体更饱满、圆融、浑厚。</li>
+</ol>
+<p>版权声明：用户可基于合法目的用于商业用途或非商业用途，以及嵌入式使用<a href="https://www.iconfont.cn/fonts/detail?cnid=IhcTcFymWeyf" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '阿里妈妈东方大楷',
+    view: 'https://www.iconfont.cn/fonts/detail?cnid=IhcTcFymWeyf',
+    github: '',
+    via: 'https://www.iconfont.cn/fonts/detail?cnid=IhcTcFymWeyf',
+    linkpan:'https://pan.baidu.com/s/1QHDIkjN6eJjMIDfridrdYA?pwd=wx43',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h3 id="_4-4-阿里妈妈数黑体" tabindex="-1">4.4 阿里妈妈数黑体 <a class="header-anchor" href="#_4-4-阿里妈妈数黑体" aria-label="Permalink to &quot;4.4 阿里妈妈数黑体&quot;">&ZeroWidthSpace;</a></h3>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfqm0ztkj21sg3conpd.jpg" alt="阿里妈妈数黑体" data-fancybox="gallery"></p>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxfqyxw9rj21sg0tukjl.jpg" alt="阿里妈妈数黑体" data-fancybox="gallery"></p>
+<p>阿里妈妈数黑体为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6767个汉字；英文大小写共52个；常用标点符号共206个，总计7025个字符。</p>
+<h4 id="特征-6" tabindex="-1">特征 <a class="header-anchor" href="#特征-6" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>这款字的生成是人机协同工作的成果，设计原型，智能参与，人工干预，人机循环优化，直到最终生成满意标准字库。</li>
+<li>数黑体是基于阿里妈妈营销应用场景下产生的营销字体，通用性和易用性强，适用于多品类商品，更高效的解决了电商类平台的用字需求。</li>
+<li>字型饱满、体态中正，布白极具现代韵律，落笔厚实而简练；</li>
+<li>字里行间流露出先锋、前卫和时尚的视觉感受。</li>
+<li>适用于电商、广告、品牌形象、推广物料等场景。</li>
+</ol>
+<p>版权声明：用户可基于合法目的用于商业用途或非商业用途，以及嵌入式使用<a href="https://www.iconfont.cn/fonts/detail?cnid=a9fXc2HD9n7s" target="_blank" rel="noreferrer">（点击查看）</a></p>
+<ArticleLink via="post" :work="{
+    title: '阿里妈妈数黑体',
+    view: 'https://www.iconfont.cn/fonts/detail?cnid=a9fXc2HD9n7s',
+    github: '',
+    via: 'https://www.iconfont.cn/fonts/detail?cnid=a9fXc2HD9n7s',
+    linkpan:'https://pan.baidu.com/s/14oYXOEBFwaOEWQK7CtbETQ?pwd=puq3',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/01/freebie-chinese-font.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlxgepmlgvj20k00dctkd.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Vue]]></title>
+            <link>https://appbeebee.com/posts/2024/01/aa.html</link>
+            <guid>https://appbeebee.com/posts/2024/01/aa.html</guid>
+            <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2024/01/aa.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="vue" tabindex="-1">Vue <a class="header-anchor" href="#vue" aria-label="Permalink to &quot;Vue&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-tldraw-tldraw" tabindex="-1">1.tldraw/tldraw <a class="header-anchor" href="#_1-tldraw-tldraw" aria-label="Permalink to &quot;1.tldraw/tldraw&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3giyk96j21400mik2b.jpg" alt="tldraw/tldraw" data-fancybox="gallery"></p>
+<p>tldraw 是一个用于在 React 中创建无限画布体验的库。部署后允许多人协同绘制作品。同时结合makereal模型，可以让用户通过绘制软件图像并利用AI将其变为真实可用的代码。</p>
+<p>&quot;Make Real&quot;功能使用OpenAI的GPT-4V API将矢量绘图转化为可运行的Tailwind CSS和JavaScript代码，可以复制用户界面，甚至创建类似Breakout的简单游戏。</p>
+<p>该项目允许你本地部署学习，如果需要发布则需要获得商业授权。目前在 github已经获得 30.5k 的 star</p>
+<ArticleLink via="post" :work="{
+    title: 'tldraw/tldraw',
+    view: 'https://www.tldraw.com/',
+    github: 'tldraw/tldraw',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<ArticleLink via="post" :work="{
+    title: 'tldraw/make-real',
+    view: 'https://makereal.tldraw.com/',
+    github: 'tldraw/make-real',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-sawyerhood-draw-a-ui" tabindex="-1">2.SawyerHood/draw-a-ui <a class="header-anchor" href="#_2-sawyerhood-draw-a-ui" aria-label="Permalink to &quot;2.SawyerHood/draw-a-ui&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3gw3lhng20go09e1kx.jpg" alt="SawyerHood/draw-a-ui" data-fancybox="gallery"></p>
+<p>这是一个 Next.js 应用程序。上面提到的tldraw/make-real模型便是基于此项目 fork而来。</p>
+<p>此项目使用 tldraw 和 gpt-4-vision api 根据您绘制的线框生成 html 应用程序。</p>
+<p>其工作原理是获取当前画布 SVG，将其转换为 PNG，然后将该 png 发送到 gpt-4-vision，并附有指令以返回带有 tailwind 的单个 html 文件。</p>
+<ArticleLink via="post" :work="{
+    title: 'SawyerHood/draw-a-ui',
+    view: 'https://www.draw-a-ui.com/',
+    github: 'SawyerHood/draw-a-ui',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-didi-logicflow" tabindex="-1">3.didi/LogicFlow <a class="header-anchor" href="#_3-didi-logicflow" aria-label="Permalink to &quot;3.didi/LogicFlow&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3hdqj2vg21i20ugkjl.jpg" alt="didi/LogicFlow" data-fancybox="gallery"></p>
+<p>LogicFlow是一个流程图编辑框架，提供了一系列流程图交互和编辑所必需的功能，以及简单灵活的节点定制、插件等扩展机制，使我们能够快速满足业务系统中类流程图的需求。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>图的绘制能力。基于 SVG 来绘制形状各异的节点和线，并提供了基础的节点（矩形、圆形、多边形等）和线（直线、折线、曲线）</li>
+<li>各类交互能力，让图动起来。根据节点、线、图的各类鼠标事件（hover、点击、拖拽等）做出反应。比如节点拖拽、拖拽创建连线、线的调整、双击节点编辑文本等</li>
+<li>提升编辑效率的能力。提供网格、对齐线，上一步、下一步，键盘快捷键，图放大缩小等配套能力，帮助用户提升编辑效率</li>
+<li>提供了丰富的 API ，宿主研发通过 API 传参调用和监听事件的方式，与 LogicFlow 完成交互通过以上能力，前端研发可以低成本、快速的搭建起流程可视化的应用，提供流畅的产品交互。</li>
+<li>高可扩展性。兼容各种产品定制的流程编辑需求，大部分模块都以插件的形式实现，并且支持各个模块自由插拔。</li>
+<li>独立完整。流程图可以充分表达业务逻辑，不受流程引擎的限制。</li>
+<li>专业。专注于业务流程编辑</li>
+</ol>
+<p>目前在 github已经获得 6.3k 的 star</p>
+<ArticleLink via="post" :work="{
+    title: 'didi/LogicFlow',
+    view: 'https://site.logic-flow.cn/examples/#/gallery',
+    github: 'didi/LogicFlow',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-excalidraw-excalidraw" tabindex="-1">4.excalidraw/excalidraw <a class="header-anchor" href="#_4-excalidraw-excalidraw" aria-label="Permalink to &quot;4.excalidraw/excalidraw&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg" alt="excalidraw/excalidraw" data-fancybox="gallery"></p>
+<p>Excalidraw 是一款轻量的手绘风格电子白板在线应用，无论是 Windows / macOS / linux，甚至是手机，打开浏览器就能使用，能简单地画出美观漂亮的流程图、示意图和开发架构图等常用图片，也可以作为会议画板使用，不仅是一款优秀的画图应用，也是一款自由便捷的电子白板应用。</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>💯 免费且开源。</li>
+<li>🎨 无限的、基于画布的白板。</li>
+<li>✍️类似手绘的风格。</li>
+<li>🌓 黑暗模式。</li>
+<li>🏗️可定制。</li>
+<li>📷 图片支持。</li>
+<li>😀 形状库支持。</li>
+<li>👅 本地化（i18n）支持。</li>
+<li>🖼️ 导出为 PNG、SVG 和剪贴板。</li>
+<li>💾 开放格式 - 将图纸导出为.excalidrawjson 文件。</li>
+<li>⚒️ 多种工具 - 矩形、圆形、菱形、箭头、线条、自由绘制、橡皮擦...</li>
+<li>➡️ 箭头绑定和标记箭头。</li>
+<li>🔙 撤消/重做。</li>
+<li>🔍 缩放和平移支持。</li>
+</ul>
+<p>并且 <a href="https://libraries.excalidraw.com/" target="_blank" rel="noreferrer">https://libraries.excalidraw.com/</a> 提供大量的可使用的绘画素材，各种手绘风格的图标、箭头、流程和图标等</p>
+<ArticleLink via="post" :work="{
+    title: 'excalidraw/excalidraw',
+    view: 'https://excalidraw.com/',
+    github: 'excalidraw/excalidraw',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<p>同时，许多开源的Excalidraw魔改版值得使用：</p>
+<h3 id="_1-revezone-revezone" tabindex="-1">1. <a href="https://github.com/revezone/revezone" target="_blank" rel="noreferrer">revezone/revezone</a> <a class="header-anchor" href="#_1-revezone-revezone" aria-label="Permalink to &quot;1. [revezone/revezone](https://github.com/revezone/revezone)&quot;">&ZeroWidthSpace;</a></h3>
+<p>一款以图形为中心、轻量级、本地优先的用于构建第二大脑的效率工具。支持 Excalidraw、Tldraw 白板和类 Notion 笔记。</p>
+<p><a href="https://github.com/revezone/revezone" target="_blank" rel="noreferrer">https://github.com/revezone/revezone</a></p>
+<h3 id="_2-linkxzhou-excalidraw-plus" tabindex="-1">2. <a href="https://github.com/linkxzhou/excalidraw-plus" target="_blank" rel="noreferrer">linkxzhou/excalidraw-plus</a> <a class="header-anchor" href="#_2-linkxzhou-excalidraw-plus" aria-label="Permalink to &quot;2. [linkxzhou/excalidraw-plus](https://github.com/linkxzhou/excalidraw-plus)&quot;">&ZeroWidthSpace;</a></h3>
+<p>excalidraw扩展版本</p>
+<ul>
+<li>中文手写体</li>
+<li>多画布功能</li>
+<li>多模板增加字段适配脚本</li>
+<li>增加选择颜色种类</li>
+</ul>
+<p><a href="https://github.com/linkxzhou/excalidraw-plus" target="_blank" rel="noreferrer">https://github.com/linkxzhou/excalidraw-plus</a></p>
+<h3 id="_3-zsviczian-obsidian-excalidraw-plugin" tabindex="-1">3. <a href="https://github.com/zsviczian/obsidian-excalidraw-plugin" target="_blank" rel="noreferrer">zsviczian/obsidian-excalidraw-plugin</a> <a class="header-anchor" href="#_3-zsviczian-obsidian-excalidraw-plugin" aria-label="Permalink to &quot;3. [zsviczian/obsidian-excalidraw-plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin)&quot;">&ZeroWidthSpace;</a></h3>
+<p>Obsidian-Excalidraw 插件将功能丰富的绘图工具Excalidraw集成到 Obsidian 中。您可以在 Vault 中存储和编辑 Excalidraw 文件，可以将工程图嵌入到文档中，还可以链接到 Excalidraw 之间的文档和其他工程图。</p>
+<p><a href="https://github.com/zsviczian/obsidian-excalidraw-plugin" target="_blank" rel="noreferrer">https://github.com/zsviczian/obsidian-excalidraw-plugin</a></p>
+<h3 id="_4-korbinzhao-excalidraw-cn" tabindex="-1">4. <a href="https://github.com/korbinzhao/excalidraw-cn" target="_blank" rel="noreferrer">korbinzhao/excalidraw-cn</a> <a class="header-anchor" href="#_4-korbinzhao-excalidraw-cn" aria-label="Permalink to &quot;4. [korbinzhao/excalidraw-cn](https://github.com/korbinzhao/excalidraw-cn)&quot;">&ZeroWidthSpace;</a></h3>
+<p>Excalidraw-CN 是支持中文手写和多亮度的Excalidraw白板工具。Excalidraw-CN是一款基于Excalidraw的支持中文手绘字体和多画布的白板。</p>
+<p>在线使用： <a href="https://revezone.com/index.html" target="_blank" rel="noreferrer">https://revezone.com/index.html</a><br>
+源码： <a href="https://github.com/korbinzhao/excalidraw-cn" target="_blank" rel="noreferrer">https://github.com/korbinzhao/excalidraw-cn</a></p>
+<h3 id="_5-dai-shi-excalidraw-claymate" tabindex="-1">5. <a href="https://github.com/dai-shi/excalidraw-claymate" target="_blank" rel="noreferrer">dai-shi/excalidraw-claymate</a> <a class="header-anchor" href="#_5-dai-shi-excalidraw-claymate" aria-label="Permalink to &quot;5. [dai-shi/excalidraw-claymate](https://github.com/dai-shi/excalidraw-claymate)&quot;">&ZeroWidthSpace;</a></h3>
+<p>一个基于 Excalidraw 的工具，可用于用于创建定格动画和幻灯片。</p>
+<p>在线使用： <a href="https://dai-shi.github.io/excalidraw-claymate/" target="_blank" rel="noreferrer">https://dai-shi.github.io/excalidraw-claymate/</a><br>
+源码： <a href="https://github.com/dai-shi/excalidraw-claymate" target="_blank" rel="noreferrer">https://github.com/dai-shi/excalidraw-claymate</a></p>
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/01/aa.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[4款开源的漂亮的现代化的基于AI绘画面板生成源码工具]]></title>
+            <link>https://appbeebee.com/posts/2024/01/open-source-online-draw-builder.html</link>
+            <guid>https://appbeebee.com/posts/2024/01/open-source-online-draw-builder.html</guid>
+            <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2024/01/open-source-online-draw-builder.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_4款开源的漂亮的现代化的基于ai绘画面板生成源码工具" tabindex="-1">4款开源的漂亮的现代化的基于AI绘画面板生成源码工具 <a class="header-anchor" href="#_4款开源的漂亮的现代化的基于ai绘画面板生成源码工具" aria-label="Permalink to &quot;4款开源的漂亮的现代化的基于AI绘画面板生成源码工具&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-tldraw-tldraw" tabindex="-1">1.tldraw/tldraw <a class="header-anchor" href="#_1-tldraw-tldraw" aria-label="Permalink to &quot;1.tldraw/tldraw&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3giyk96j21400mik2b.jpg" alt="tldraw/tldraw" data-fancybox="gallery"></p>
+<p>tldraw 是一个用于在 React 中创建无限画布体验的库。部署后允许多人协同绘制作品。同时结合makereal模型，可以让用户通过绘制软件图像并利用AI将其变为真实可用的代码。</p>
+<p>&quot;Make Real&quot;功能使用OpenAI的GPT-4V API将矢量绘图转化为可运行的Tailwind CSS和JavaScript代码，可以复制用户界面，甚至创建类似Breakout的简单游戏。</p>
+<p>该项目允许你本地部署学习，如果需要发布则需要获得商业授权。目前在 github已经获得 30.5k 的 star</p>
+<ArticleLink via="post" :work="{
+    title: 'tldraw/tldraw',
+    view: 'https://www.tldraw.com/',
+    github: 'tldraw/tldraw',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<ArticleLink via="post" :work="{
+    title: 'tldraw/make-real',
+    view: 'https://makereal.tldraw.com/',
+    github: 'tldraw/make-real',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-sawyerhood-draw-a-ui" tabindex="-1">2.SawyerHood/draw-a-ui <a class="header-anchor" href="#_2-sawyerhood-draw-a-ui" aria-label="Permalink to &quot;2.SawyerHood/draw-a-ui&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3gw3lhng20go09e1kx.jpg" alt="SawyerHood/draw-a-ui" data-fancybox="gallery"></p>
+<p>这是一个 Next.js 应用程序。上面提到的tldraw/make-real模型便是基于此项目 fork而来。</p>
+<p>此项目使用 tldraw 和 gpt-4-vision api 根据您绘制的线框生成 html 应用程序。</p>
+<p>其工作原理是获取当前画布 SVG，将其转换为 PNG，然后将该 png 发送到 gpt-4-vision，并附有指令以返回带有 tailwind 的单个 html 文件。</p>
+<ArticleLink via="post" :work="{
+    title: 'SawyerHood/draw-a-ui',
+    view: 'https://www.draw-a-ui.com/',
+    github: 'SawyerHood/draw-a-ui',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-didi-logicflow" tabindex="-1">3.didi/LogicFlow <a class="header-anchor" href="#_3-didi-logicflow" aria-label="Permalink to &quot;3.didi/LogicFlow&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3hdqj2vg21i20ugkjl.jpg" alt="didi/LogicFlow" data-fancybox="gallery"></p>
+<p>LogicFlow是一个流程图编辑框架，提供了一系列流程图交互和编辑所必需的功能，以及简单灵活的节点定制、插件等扩展机制，使我们能够快速满足业务系统中类流程图的需求。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>图的绘制能力。基于 SVG 来绘制形状各异的节点和线，并提供了基础的节点（矩形、圆形、多边形等）和线（直线、折线、曲线）</li>
+<li>各类交互能力，让图动起来。根据节点、线、图的各类鼠标事件（hover、点击、拖拽等）做出反应。比如节点拖拽、拖拽创建连线、线的调整、双击节点编辑文本等</li>
+<li>提升编辑效率的能力。提供网格、对齐线，上一步、下一步，键盘快捷键，图放大缩小等配套能力，帮助用户提升编辑效率</li>
+<li>提供了丰富的 API ，宿主研发通过 API 传参调用和监听事件的方式，与 LogicFlow 完成交互通过以上能力，前端研发可以低成本、快速的搭建起流程可视化的应用，提供流畅的产品交互。</li>
+<li>高可扩展性。兼容各种产品定制的流程编辑需求，大部分模块都以插件的形式实现，并且支持各个模块自由插拔。</li>
+<li>独立完整。流程图可以充分表达业务逻辑，不受流程引擎的限制。</li>
+<li>专业。专注于业务流程编辑</li>
+</ol>
+<p>目前在 github已经获得 6.3k 的 star</p>
+<ArticleLink via="post" :work="{
+    title: 'didi/LogicFlow',
+    view: 'https://site.logic-flow.cn/examples/#/gallery',
+    github: 'didi/LogicFlow',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-excalidraw-excalidraw" tabindex="-1">4.excalidraw/excalidraw <a class="header-anchor" href="#_4-excalidraw-excalidraw" aria-label="Permalink to &quot;4.excalidraw/excalidraw&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg" alt="excalidraw/excalidraw" data-fancybox="gallery"></p>
+<p>Excalidraw 是一款轻量的手绘风格电子白板在线应用，无论是 Windows / macOS / linux，甚至是手机，打开浏览器就能使用，能简单地画出美观漂亮的流程图、示意图和开发架构图等常用图片，也可以作为会议画板使用，不仅是一款优秀的画图应用，也是一款自由便捷的电子白板应用。</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>💯 免费且开源。</li>
+<li>🎨 无限的、基于画布的白板。</li>
+<li>✍️类似手绘的风格。</li>
+<li>🌓 黑暗模式。</li>
+<li>🏗️可定制。</li>
+<li>📷 图片支持。</li>
+<li>😀 形状库支持。</li>
+<li>👅 本地化（i18n）支持。</li>
+<li>🖼️ 导出为 PNG、SVG 和剪贴板。</li>
+<li>💾 开放格式 - 将图纸导出为.excalidrawjson 文件。</li>
+<li>⚒️ 多种工具 - 矩形、圆形、菱形、箭头、线条、自由绘制、橡皮擦...</li>
+<li>➡️ 箭头绑定和标记箭头。</li>
+<li>🔙 撤消/重做。</li>
+<li>🔍 缩放和平移支持。</li>
+</ul>
+<p>并且 <a href="https://libraries.excalidraw.com/" target="_blank" rel="noreferrer">https://libraries.excalidraw.com/</a> 提供大量的可使用的绘画素材，各种手绘风格的图标、箭头、流程和图标等</p>
+<ArticleLink via="post" :work="{
+    title: 'excalidraw/excalidraw',
+    view: 'https://excalidraw.com/',
+    github: 'excalidraw/excalidraw',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<p>同时，许多开源的Excalidraw魔改版值得使用：</p>
+<h3 id="_1-revezone-revezone" tabindex="-1">1. <a href="https://github.com/revezone/revezone" target="_blank" rel="noreferrer">revezone/revezone</a> <a class="header-anchor" href="#_1-revezone-revezone" aria-label="Permalink to &quot;1. [revezone/revezone](https://github.com/revezone/revezone)&quot;">&ZeroWidthSpace;</a></h3>
+<p>一款以图形为中心、轻量级、本地优先的用于构建第二大脑的效率工具。支持 Excalidraw、Tldraw 白板和类 Notion 笔记。</p>
+<p><a href="https://github.com/revezone/revezone" target="_blank" rel="noreferrer">https://github.com/revezone/revezone</a></p>
+<h3 id="_2-linkxzhou-excalidraw-plus" tabindex="-1">2. <a href="https://github.com/linkxzhou/excalidraw-plus" target="_blank" rel="noreferrer">linkxzhou/excalidraw-plus</a> <a class="header-anchor" href="#_2-linkxzhou-excalidraw-plus" aria-label="Permalink to &quot;2. [linkxzhou/excalidraw-plus](https://github.com/linkxzhou/excalidraw-plus)&quot;">&ZeroWidthSpace;</a></h3>
+<p>excalidraw扩展版本</p>
+<ul>
+<li>中文手写体</li>
+<li>多画布功能</li>
+<li>多模板增加字段适配脚本</li>
+<li>增加选择颜色种类</li>
+</ul>
+<p><a href="https://github.com/linkxzhou/excalidraw-plus" target="_blank" rel="noreferrer">https://github.com/linkxzhou/excalidraw-plus</a></p>
+<h3 id="_3-zsviczian-obsidian-excalidraw-plugin" tabindex="-1">3. <a href="https://github.com/zsviczian/obsidian-excalidraw-plugin" target="_blank" rel="noreferrer">zsviczian/obsidian-excalidraw-plugin</a> <a class="header-anchor" href="#_3-zsviczian-obsidian-excalidraw-plugin" aria-label="Permalink to &quot;3. [zsviczian/obsidian-excalidraw-plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin)&quot;">&ZeroWidthSpace;</a></h3>
+<p>Obsidian-Excalidraw 插件将功能丰富的绘图工具Excalidraw集成到 Obsidian 中。您可以在 Vault 中存储和编辑 Excalidraw 文件，可以将工程图嵌入到文档中，还可以链接到 Excalidraw 之间的文档和其他工程图。</p>
+<p><a href="https://github.com/zsviczian/obsidian-excalidraw-plugin" target="_blank" rel="noreferrer">https://github.com/zsviczian/obsidian-excalidraw-plugin</a></p>
+<h3 id="_4-korbinzhao-excalidraw-cn" tabindex="-1">4. <a href="https://github.com/korbinzhao/excalidraw-cn" target="_blank" rel="noreferrer">korbinzhao/excalidraw-cn</a> <a class="header-anchor" href="#_4-korbinzhao-excalidraw-cn" aria-label="Permalink to &quot;4. [korbinzhao/excalidraw-cn](https://github.com/korbinzhao/excalidraw-cn)&quot;">&ZeroWidthSpace;</a></h3>
+<p>Excalidraw-CN 是支持中文手写和多亮度的Excalidraw白板工具。Excalidraw-CN是一款基于Excalidraw的支持中文手绘字体和多画布的白板。</p>
+<p>在线使用： <a href="https://revezone.com/index.html" target="_blank" rel="noreferrer">https://revezone.com/index.html</a><br>
+源码： <a href="https://github.com/korbinzhao/excalidraw-cn" target="_blank" rel="noreferrer">https://github.com/korbinzhao/excalidraw-cn</a></p>
+<h3 id="_5-dai-shi-excalidraw-claymate" tabindex="-1">5. <a href="https://github.com/dai-shi/excalidraw-claymate" target="_blank" rel="noreferrer">dai-shi/excalidraw-claymate</a> <a class="header-anchor" href="#_5-dai-shi-excalidraw-claymate" aria-label="Permalink to &quot;5. [dai-shi/excalidraw-claymate](https://github.com/dai-shi/excalidraw-claymate)&quot;">&ZeroWidthSpace;</a></h3>
+<p>一个基于 Excalidraw 的工具，可用于用于创建定格动画和幻灯片。</p>
+<p>在线使用： <a href="https://dai-shi.github.io/excalidraw-claymate/" target="_blank" rel="noreferrer">https://dai-shi.github.io/excalidraw-claymate/</a><br>
+源码： <a href="https://github.com/dai-shi/excalidraw-claymate" target="_blank" rel="noreferrer">https://github.com/dai-shi/excalidraw-claymate</a></p>
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/01/open-source-online-draw-builder.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[4款开源的漂亮的日历/待办/计划类小程序]]></title>
+            <link>https://appbeebee.com/posts/2023/12/open-source-todo-wechatapp.html</link>
+            <guid>https://appbeebee.com/posts/2023/12/open-source-todo-wechatapp.html</guid>
+            <pubDate>Sun, 10 Dec 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld9g78ix8j20k00dc795.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/12/open-source-todo-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_4款开源的漂亮的日历-待办-计划类小程序" tabindex="-1">4款开源的漂亮的日历/待办/计划类小程序 <a class="header-anchor" href="#_4款开源的漂亮的日历-待办-计划类小程序" aria-label="Permalink to &quot;4款开源的漂亮的日历/待办/计划类小程序&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-gwokhov-chronus" tabindex="-1">1.Gwokhov/chronus <a class="header-anchor" href="#_1-gwokhov-chronus" aria-label="Permalink to &quot;1.Gwokhov/chronus&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld9g78ix8j20k00dc795.jpg" alt="Gwokhov/chronus" data-fancybox="gallery"></p>
+<p>🕐Chronus 是一款能帮助你管理生活目标的微信小程序。小程序原生环境开发，并且利用云开发能力（云函数、数据库）作为数据持久化方案</p>
+<ArticleLink via="post" :work="{
+    title: 'Gwokhov/chronus',
+    view: 'https://github.com/Gwokhov/chronus/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld9gqcnygj20760763yt.jpg',
+    github: 'Gwokhov/chronus',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_2-gzhiyi-dandan-account" tabindex="-1">2.GzhiYi/dandan-account <a class="header-anchor" href="#_2-gzhiyi-dandan-account" aria-label="Permalink to &quot;2.GzhiYi/dandan-account&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld9wdww8xj20k00dcdku.jpg" alt="GzhiYi/dandan-account" data-fancybox="gallery"></p>
+<p>小程序【单单记账】 🐷 不记录任何用户身份信息；专注记账的目的；账单清晰自然，报表易懂易分析；助你理财之路轻松有意义，</p>
+<ArticleLink via="post" :work="{
+    title: 'GzhiYi/dandan-account',
+    view: 'https://github.com/GzhiYi/dandan-account/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43ly1hld9wqy100j202u02umx7.jpg',
+    github: 'GzhiYi/dandan-account',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_3-realyao-wxminiprogram-focus-clock" tabindex="-1">3.realyao/WXminiprogram-Focus-clock <a class="header-anchor" href="#_3-realyao-wxminiprogram-focus-clock" aria-label="Permalink to &quot;3.realyao/WXminiprogram-Focus-clock&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43ly1hldawasb8jj20k00dcwjv.jpg" alt="realyao/WXminiprogram-Focus-clock" data-fancybox="gallery"></p>
+<p>『专注时钟』是你管理每日时间、提高学习工作效率、养成自律习惯的得力助手。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>专注计时（cf. 番茄工作法）</li>
+<li>待办清单（ToDo List）</li>
+<li>数据记录 图表分析</li>
+<li>打卡、海报</li>
+<li>白噪声背景声</li>
+<li>排行榜</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'realyao/WXminiprogram-Focus-clock',
+    view: 'https://github.com/realyao/WXminiprogram-Focus-clock/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43ly1hldawl33pfj202u02u0sr.jpg',
+    github: 'realyao/WXminiprogram-Focus-clock',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_4-mayandev-schedule-parser" tabindex="-1">4.Mayandev/schedule-parser <a class="header-anchor" href="#_4-mayandev-schedule-parser" aria-label="Permalink to &quot;4.Mayandev/schedule-parser&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43ly1hldbd071moj20k00dcte4.jpg" alt="Mayandev/schedule-parser" data-fancybox="gallery"></p>
+<p>一个极简的日程解析小程序。给我一段文本，还你一个日程</p>
+<ArticleLink via="post" :work="{
+    title: 'Mayandev/schedule-parser',
+    view: 'https://github.com/Mayandev/schedule-parser/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43ly1hldbcsgs1xj209k09kq3k.jpg',
+    github: 'Mayandev/schedule-parser',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/12/open-source-todo-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld9g78ix8j20k00dc795.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款开源的网页端音乐播放器]]></title>
+            <link>https://appbeebee.com/posts/2023/12/open-source-web-music-player.html</link>
+            <guid>https://appbeebee.com/posts/2023/12/open-source-web-music-player.html</guid>
+            <pubDate>Tue, 05 Dec 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbsgc48k5j20k00dc79m.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/12/open-source-web-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款开源的网页端音乐播放器" tabindex="-1">5款开源的网页端音乐播放器 <a class="header-anchor" href="#_5款开源的网页端音乐播放器" aria-label="Permalink to &quot;5款开源的网页端音乐播放器&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-antrancs-maeve" tabindex="-1">1.antrancs/maeve <a class="header-anchor" href="#_1-antrancs-maeve" aria-label="Permalink to &quot;1.antrancs/maeve&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbpvm15anj20k00adn2s.jpg" alt="antrancs/maeve" data-fancybox="gallery"></p>
+<p>Maeve - 支持 Last.fm 的可自定义 Apple Music 网络播放器</p>
+<ArticleLink via="post" :work="{
+    title: 'antrancs/maeve',
+    view: 'https://maevemusic.app/',
+    github: 'antrancs/maeve',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-paulschwoerer-leafplayer" tabindex="-1">2.paulschwoerer/leafplayer <a class="header-anchor" href="#_2-paulschwoerer-leafplayer" aria-label="Permalink to &quot;2.paulschwoerer/leafplayer&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbq3zxsb7j20k00b9793.jpg" alt="paulschwoerer/leafplayer" data-fancybox="gallery"></p>
+<p>Leafplayer 是一款简约的音乐流媒体服务器，注重性能和流畅的用户界面。它使您能够从世界任何地方聆听您的私人音乐收藏。</p>
+<ArticleLink via="post" :work="{
+    title: 'paulschwoerer/leafplayer',
+    view: 'paulschwoerer/leafplayer',
+    github: 'paulschwoerer/leafplayer',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-datlyfe-tunein" tabindex="-1">3.Datlyfe/tuneIn <a class="header-anchor" href="#_3-datlyfe-tunein" aria-label="Permalink to &quot;3.Datlyfe/tuneIn&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbrqzsg8fj20k00a80vs.jpg" alt="Datlyfe/tuneIn" data-fancybox="gallery"></p>
+<p>这是一个使用VueJs开发的javascript项目。简单而优雅的音乐发现应用程序</p>
+<ArticleLink via="post" :work="{
+    title: 'Datlyfe/tuneIn',
+    view: 'https://tunein.netlify.app/',
+    github: 'Datlyfe/tuneIn',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-thuongtruong1009-bee-music" tabindex="-1">4.thuongtruong1009/bee-music <a class="header-anchor" href="#_4-thuongtruong1009-bee-music" aria-label="Permalink to &quot;4.thuongtruong1009/bee-music&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbruvuswrj20k00buago.jpg" alt="thuongtruong1009/bee-music" data-fancybox="gallery"></p>
+<p>这款播放器方便你在Vite 中使用 Vue 3 进行开发</p>
+<ArticleLink via="post" :work="{
+    title: 'thuongtruong1009/bee-music',
+    view: 'https://bee-music.vercel.app/',
+    github: 'thuongtruong1009/bee-music',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_5-c01day-music-player" tabindex="-1">5.C01day/music-player <a class="header-anchor" href="#_5-c01day-music-player" aria-label="Permalink to &quot;5.C01day/music-player&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbsgc48k5j20k00dc79m.jpg" alt="C01day/music-player" data-fancybox="gallery"></p>
+<p>一个简单的音乐播放器组件，使用红黑色搭配</p>
+<ArticleLink via="post" :work="{
+    title: 'C01day/music-player',
+    view: 'https://music.c01day.com/#/',
+    github: 'C01day/music-player',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/12/open-source-web-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlbsgc48k5j20k00dc79m.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载]]></title>
+            <link>https://appbeebee.com/posts/2023/12/freebie-iphone15pro-mockups.html</link>
+            <guid>https://appbeebee.com/posts/2023/12/freebie-iphone15pro-mockups.html</guid>
+            <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/12/freebie-iphone15pro-mockups.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款免费的iphone15-15pro手机设备渲染模型-提供备用下载" tabindex="-1">5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载 <a class="header-anchor" href="#_5款免费的iphone15-15pro手机设备渲染模型-提供备用下载" aria-label="Permalink to &quot;5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-faysal-khan-iphone-15-pro-mockup-for-adobe-xd-for-free" tabindex="-1">1.Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free <a class="header-anchor" href="#_1-faysal-khan-iphone-15-pro-mockup-for-adobe-xd-for-free" aria-label="Permalink to &quot;1.Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg" alt="Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free" data-fancybox="gallery"></p>
+<p>格式：Adobe XD</p>
+<ArticleLink via="post" :work="{
+    title: 'Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free',
+    view: 'https://drive.google.com/file/d/1y3WKlZzhTchUGjvnFzXQltllCt9A2yJt/view?pli=1',
+    github: '',
+    via:'https://www.behance.net/gallery/179858489/iPhone-15-Pro-Mockup-for-Adobe-XD-for-Free',
+    coveross: '',
+    linkpan:'https://pan.baidu.com/s/1xiic-0OxqPvMbkQVeshcQw?pwd=xit6',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_2-gregory-riaguzov-iphone-pro-15-3d-mockups-free" tabindex="-1">2.Gregory Riaguzov/iPhone Pro 15 3D Mockups Free <a class="header-anchor" href="#_2-gregory-riaguzov-iphone-pro-15-3d-mockups-free" aria-label="Permalink to &quot;2.Gregory Riaguzov/iPhone Pro 15 3D Mockups Free&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg" alt="
+Gregory Riaguzov/iPhone Pro 15 3D Mockups Free" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Gregory Riaguzov/iPhone Pro 15 3D Mockups Free',
+    view: 'https://www.figma.com/community/file/1303247171848616022',
+    github: '',
+    via: 'https://dribbble.com/shots/22988005-iPhone-Pro-15-3D-Mockups-Free',
+    coveross: '',
+    linkpan:'https://pan.baidu.com/s/10YRIAwGPsh_oydpJ-vcgEw?pwd=rrhr',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_3-uiscore-iphone-15-pro-free-mockup" tabindex="-1">3.Uiscore/iPhone 15 Pro Free Mockup <a class="header-anchor" href="#_3-uiscore-iphone-15-pro-free-mockup" aria-label="Permalink to &quot;3.Uiscore/iPhone 15 Pro Free Mockup&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbm7mr4ygj20k00dcaib.jpg" alt="
+Uiscore/iPhone 15 Pro Free Mockup" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Uiscore/iPhone 15 Pro Free Mockup',
+    view: 'https://www.figma.com/community/file/1283572964869579445',
+    github: '',
+    via: 'https://dribbble.com/shots/22550033-iPhone-15-Pro-Free-Mockup',
+    coveross: '',
+    linkpan:'https://pan.baidu.com/s/1iICFFr9hwolY_yN3gwPMrA?pwd=dj71',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_4-sabrina-sultana-tanaaz-iphone-15-15-pro-free-mockups" tabindex="-1">4.Sabrina Sultana Tanaaz/iPhone 15 &amp; 15 Pro Free Mockups <a class="header-anchor" href="#_4-sabrina-sultana-tanaaz-iphone-15-15-pro-free-mockups" aria-label="Permalink to &quot;4.Sabrina Sultana Tanaaz/iPhone 15 &amp; 15 Pro Free Mockups&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbnguqredj20k00dc7al.jpg" alt="Sabrina Sultana Tanaaz/iPhone 15 &amp; 15 Pro Free Mockups" data-fancybox="gallery"></p>
+<p>格式：PSD</p>
+<ArticleLink via="post" :work="{
+    title: 'Sabrina Sultana Tanaaz/iPhone 14 Pro Max Free Mockup Design',
+    view: 'https://www.behance.net/gallery/179914841/iPhone-15-15-Pro-Free-Mockups',
+    github: '',
+    via: 'https://www.behance.net/gallery/179914841/iPhone-15-15-Pro-Free-Mockups',
+    linkpan:'https://pan.baidu.com/s/1LG2-bxkl7vaaRIrEKVYPNw?pwd=mndk',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_5-foxy-iphone-15-pro-mockup-—-free" tabindex="-1">5.Foxy/iPhone 15 Pro Mockup — free <a class="header-anchor" href="#_5-foxy-iphone-15-pro-mockup-—-free" aria-label="Permalink to &quot;5.Foxy/iPhone 15 Pro Mockup — free&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbplcsbqmj20k00dc10b.jpg" alt="Foxy/iPhone 15 Pro Mockup — free" data-fancybox="gallery"></p>
+<p>格式：PSD</p>
+<ArticleLink via="post" :work="{
+    title: 'Foxy/iPhone 15 Pro Mockup — free',
+    view: 'https://drive.google.com/file/d/1gymG2FU74V8vV_ttrcljoJ7Q6fTR212k/view?usp=sharing',
+    github: '',
+    via: 'https://www.behance.net/gallery/179912187/iPhone-15-Pro-Mockup-free',
+    linkpan:'https://pan.baidu.com/s/1DKCrHkj_chSBBP0TmtyROw?pwd=c2g1',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/12/freebie-iphone15pro-mockups.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[1款开源的漂亮的学习/课程/考试类小程序]]></title>
+            <link>https://appbeebee.com/posts/2023/11/open-source-study-wechatapp.html</link>
+            <guid>https://appbeebee.com/posts/2023/11/open-source-study-wechatapp.html</guid>
+            <pubDate>Wed, 22 Nov 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/11/open-source-study-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_1款开源的漂亮的学习-课程-考试类小程序" tabindex="-1">1款开源的漂亮的学习/课程/考试类小程序 <a class="header-anchor" href="#_1款开源的漂亮的学习-课程-考试类小程序" aria-label="Permalink to &quot;1款开源的漂亮的学习/课程/考试类小程序&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-arleyguolei-wechat-app-words-pk" tabindex="-1">1.arleyGuoLei/wechat-app-words-pk <a class="header-anchor" href="#_1-arleyguolei-wechat-app-words-pk" aria-label="Permalink to &quot;1.arleyGuoLei/wechat-app-words-pk&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg" alt="arleyGuoLei/wechat-app-words-pk" data-fancybox="gallery"></p>
+<p>单词天天斗 (毕业设计/实战小程序/微信小程序完整项目)</p>
+<p>该项目基于「微信小程序」原生框架和「微信小程序云开发」实现单词对战类小程序，技术栈主要为微信小程序、云开发、TypeScript</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>支持好友对战、随机匹配、人机对战三种不同模式的「对战模式」</li>
+<li>提供「每日词汇」、「生词本」、「排行榜」、「设置」等功能，实现完整的业务闭环</li>
+<li>单词库包含从小学、初中、高中、四六级、考研、雅思等常需掌握的词汇</li>
+<li>支持自定义词库</li>
+<li>支持自定义拓展无限本单词书
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'arleyGuoLei/wechat-app-words-pk',
+    view: 'https://github.com/arleyGuoLei/wechat-app-words-pk/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43ly1hlda9ofr1ij209k09kmzr.jpg',
+    github: 'arleyGuoLei/wechat-app-words-pk',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/11/open-source-study-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[4款开源的漂亮的博客/资讯/信息类小程序]]></title>
+            <link>https://appbeebee.com/posts/2023/11/open-source-blog-wechatapp.html</link>
+            <guid>https://appbeebee.com/posts/2023/11/open-source-blog-wechatapp.html</guid>
+            <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/11/open-source-blog-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_4款开源的漂亮的博客-资讯-信息类小程序" tabindex="-1">4款开源的漂亮的博客/资讯/信息类小程序 <a class="header-anchor" href="#_4款开源的漂亮的博客-资讯-信息类小程序" aria-label="Permalink to &quot;4款开源的漂亮的博客/资讯/信息类小程序&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-dulaiduwang003-scribblehub" tabindex="-1">1.dulaiduwang003/ScribbleHub <a class="header-anchor" href="#_1-dulaiduwang003-scribblehub" aria-label="Permalink to &quot;1.dulaiduwang003/ScribbleHub&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlczqtlrvtj20k00dcn35.jpg" alt="dulaiduwang003/ScribbleHub" data-fancybox="gallery"></p>
+<p>前端基于 uniapp ,后端基于 SpringBoot3 开发的 个人博客小程序。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>特效特别多~</li>
+<li>支持文章发布功能</li>
+<li>自定义头像昵称</li>
+<li>文章评论 管理员可删除普通用户评论</li>
+<li>搜索文章 (搜索板块下的文章每次都将根据类目随机获取)
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'dulaiduwang003/ScribbleHub',
+    view: 'https://github.com/dulaiduwang003/ScribbleHub/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld03tfq52j2076076aad.jpg',
+    github: 'dulaiduwang003/ScribbleHub',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_2-sysucats-zhongdamaopu" tabindex="-1">2.sysucats/zhongdamaopu <a class="header-anchor" href="#_2-sysucats-zhongdamaopu" aria-label="Permalink to &quot;2.sysucats/zhongdamaopu&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld1p2xd0jj20k00dcn4a.jpg" alt="sysucats/zhongdamaopu" data-fancybox="gallery"></p>
+<p>基于Laf云开发的一款记录流浪猫猫成长轨迹的小程序</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>猫猫档案：创建校园猫猫资料档案，猫猫相册，精选瀑布流。</li>
+<li>用户交互：用户可以上传照片，发表留言，点赞照片或反馈信息。</li>
+<li>丰富功能：包括拍照识猫，查看科普信息、公告文章等丰富功能。</li>
+<li>管理后台：部署完成后，资料管理、照片审核等操作均在小程序端完成。
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'sysucats/zhongdamaopu',
+    view: 'https://github.com/sysucats/zhongdamaopu/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld1kr283ej20by0byq5i.jpg',
+    github: 'sysucats/zhongdamaopu',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_3-dengje-lu-you" tabindex="-1">3.DengJe/lu-you <a class="header-anchor" href="#_3-dengje-lu-you" aria-label="Permalink to &quot;3.DengJe/lu-you&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld2ae6431j20k00dc47r.jpg" alt="DengJe/lu-you" data-fancybox="gallery"></p>
+<p>Laravel+Uniapp开发的微信小程序，可适用于资讯、博客等。</p>
+<p>前后端都是免费开源的</p>
+<ArticleLink via="post" :work="{
+    title: 'DengJe/lu-you',
+    view: 'https://gitee.com/DengJe/lu-you',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld2a3lo58j2076076wes.jpg',
+    github: '',
+    via: 'https://gitee.com/DengJe/lu-you',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_4-shiheme-booklover-3-0-published" tabindex="-1">4.shiheme/booklover-3.0-published <a class="header-anchor" href="#_4-shiheme-booklover-3-0-published" aria-label="Permalink to &quot;4.shiheme/booklover-3.0-published&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg" alt="shiheme/booklover-3.0-master" data-fancybox="gallery"></p>
+<p>后台基于 wordpress的校园图书借阅，图书信息展示的小程序</p>
+<h4 id="特征-2" tabindex="-1">特征 <a class="header-anchor" href="#特征-2" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>电子书下载（年度豆瓣榜、亚马逊销售榜）</li>
+<li>纸质书借阅（适合公司、学校、地区共享图书）</li>
+<li>连载书阅读</li>
+<li>媒体号推荐（收集一些达人视频号教学）</li>
+<li>评星/留言</li>
+<li>跟随系统调整风格</li>
+<li>书籍多级分类筛选</li>
+<li>书籍列表与瀑布流显示
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'shiheme/booklover-3.0-published',
+    view: 'https://github.com/shiheme/booklover-3.0-published/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld2m8dvcij2076076mxh.jpg',
+    github: 'shiheme/booklover-3.0-published',
+    via: '',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/11/open-source-blog-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款开源的应用端音乐播放器]]></title>
+            <link>https://appbeebee.com/posts/2023/11/open-source-app-music-player.html</link>
+            <guid>https://appbeebee.com/posts/2023/11/open-source-app-music-player.html</guid>
+            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/11/open-source-app-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款开源的应用端音乐播放器" tabindex="-1">5款开源的应用端音乐播放器 <a class="header-anchor" href="#_5款开源的应用端音乐播放器" aria-label="Permalink to &quot;5款开源的应用端音乐播放器&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-ciderapp-cider" tabindex="-1">1.ciderapp/Cider <a class="header-anchor" href="#_1-ciderapp-cider" aria-label="Permalink to &quot;1.ciderapp/Cider&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbpvzd1guj20k009jwhf.jpg" alt="ciderapp/Cider" data-fancybox="gallery"></p>
+<p>Cider 是一种基于 Vue.js 构建的全新跨平台 Apple Music 体验，从头开始编写时就考虑到了性能。</p>
+<ArticleLink via="post" :work="{
+    title: 'ciderapp/Cider',
+    view: 'https://cider.sh/',
+    github: 'ciderapp/Cider',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-staniel359-muffon" tabindex="-1">2.staniel359/muffon <a class="header-anchor" href="#_2-staniel359-muffon" aria-label="Permalink to &quot;2.staniel359/muffon&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbq7s4yhpj20k00bgdm1.jpg" alt="staniel359/muffon" data-fancybox="gallery"></p>
+<p>muffon是一款跨平台的桌面音乐流媒体客户端，可帮助您以高级方式聆听、发现和组织音乐。</p>
+<p>它从各种互联网来源检索音频、视频和元数据，例如：</p>
+<ul>
+<li>Last.FM</li>
+<li>VK</li>
+<li>Odnoklassniki</li>
+<li>Yandex Music</li>
+<li>Spotify
+。。。</li>
+</ul>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>完全免费</li>
+<li>无广告</li>
+<li>无需登录（但某些功能需要登录）</li>
+<li>聆听（艺术家/专辑/曲目）（+离线）（+均衡器）</li>
+<li>艺术家（曲目/专辑/类似/节目）</li>
+<li>专辑</li>
+<li>曲目（类似/专辑）
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'staniel359/muffon',
+    view: 'https://muffon.netlify.app/',
+    github: 'staniel359/muffon',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-moosync-moosync" tabindex="-1">3.Moosync/Moosync <a class="header-anchor" href="#_3-moosync-moosync" aria-label="Permalink to &quot;3.Moosync/Moosync&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbqjozpcij20k00artbu.jpg" alt="Moosync/Moosync" data-fancybox="gallery"></p>
+<p>Moosync 是一款可定制的桌面音乐播放器，界面简洁</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>在桌面上播放音频文件。</li>
+<li>无缝集成您的 Spotify 和 Youtube（包括Invidious）歌曲。</li>
+<li>无广告</li>
+<li>实时歌词</li>
+<li>在 LastFM 上记录您的曲目。</li>
+<li>直接从 Spotify、Youtube 和 LastFM 获取音乐推荐</li>
+<li>在一个播放列表中混合和匹配来自不同提供商的歌曲</li>
+<li>易于使用的界面
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'Moosync/Moosync',
+    view: 'https://moosync.app/',
+    github: 'Moosync/Moosync',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-geoxor-amethyst" tabindex="-1">4.Geoxor/Amethyst <a class="header-anchor" href="#_4-geoxor-amethyst" aria-label="Permalink to &quot;4.Geoxor/Amethyst&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbs5c976xj20k00begqr.jpg" alt="Geoxor/Amethyst" data-fancybox="gallery"></p>
+<p>Amethyst 是一个基于 Electron 的跨平台音频播放器，同时还为最终用户提供有用的工具和可定制性。</p>
+<ArticleLink via="post" :work="{
+    title: 'Geoxor/Amethyst',
+    view: 'https://amethyst.pages.dev/',
+    github: 'Geoxor/Amethyst',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_5-flb-music-flb-music-player" tabindex="-1">5.FLB-Music/FLB-Music-Player <a class="header-anchor" href="#_5-flb-music-flb-music-player" aria-label="Permalink to &quot;5.FLB-Music/FLB-Music-Player&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg" alt="FLB-Music/FLB-Music-Player" data-fancybox="gallery"></p>
+<p>一个美丽的🌹和功能丰富的💎跨平台音乐播放器和下载器</p>
+<h4 id="特征-2" tabindex="-1">特征 <a class="header-anchor" href="#特征-2" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>按艺术家、专辑、文件夹和播放列表进行音乐组织</li>
+<li>离线歌词📜</li>
+<li>标签编辑器</li>
+<li>自动下载艺术家图片🎙
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'FLB-Music/FLB-Music-Player',
+    view: 'https://flbmusic.xyz/',
+    github: 'FLB-Music/FLB-Music-Player',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/11/open-source-app-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[2款免费的卡通头像分层源文件，提供备用下载]]></title>
+            <link>https://appbeebee.com/posts/2023/10/freebie-cartoon-avatar-design.html</link>
+            <guid>https://appbeebee.com/posts/2023/10/freebie-cartoon-avatar-design.html</guid>
+            <pubDate>Thu, 26 Oct 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/10/freebie-cartoon-avatar-design.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_2款免费的卡通头像分层源文件-提供备用下载" tabindex="-1">2款免费的卡通头像分层源文件，提供备用下载 <a class="header-anchor" href="#_2款免费的卡通头像分层源文件-提供备用下载" aria-label="Permalink to &quot;2款免费的卡通头像分层源文件，提供备用下载&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-openpeeps" tabindex="-1">1.openpeeps <a class="header-anchor" href="#_1-openpeeps" aria-label="Permalink to &quot;1.openpeeps&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg" alt="openpeeps" data-fancybox="gallery"></p>
+<p>格式：Figma, Sketch, Adobe XD</p>
+<ArticleLink via="post" :work="{
+    title: 'openpeeps',
+    view: 'https://www.openpeeps.com/',
+    github: '',
+    via:'https://www.openpeeps.com/',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_2-notion-style-avatar-creator" tabindex="-1">2.notion-style-avatar-creator <a class="header-anchor" href="#_2-notion-style-avatar-creator" aria-label="Permalink to &quot;2.notion-style-avatar-creator&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld7zpifgdj20k00dc0v6.jpg" alt="notion-style-avatar-creator" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'notion-style-avatar-creator',
+    view: 'https://www.drawkit.com/illustrations/notion-style-avatar-creator',
+    github: '',
+    via:'https://www.drawkit.com/illustrations/notion-style-avatar-creator',
+    linkpan:'https://pan.baidu.com/s/1X51LYtIDq51X1LHnSo0tvg?pwd=ssti',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/10/freebie-cartoon-avatar-design.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[3款开源的基于api接口实现的内容展示应用]]></title>
+            <link>https://appbeebee.com/posts/2023/10/open-source-by-api-app.html</link>
+            <guid>https://appbeebee.com/posts/2023/10/open-source-by-api-app.html</guid>
+            <pubDate>Tue, 10 Oct 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/10/open-source-by-api-app.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_3款开源的基于api接口实现的内容展示应用" tabindex="-1">3款开源的基于api接口实现的内容展示应用 <a class="header-anchor" href="#_3款开源的基于api接口实现的内容展示应用" aria-label="Permalink to &quot;3款开源的基于api接口实现的内容展示应用&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-mayandev-morec" tabindex="-1">1.Mayandev/morec <a class="header-anchor" href="#_1-mayandev-morec" aria-label="Permalink to &quot;1.Mayandev/morec&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5p9k3btj20k00dcjyx.jpg" alt="Mayandev/morec" data-fancybox="gallery"></p>
+<p>这是一个非常精美的 Flutter 版电影客户端，利用豆瓣现有的 Api，打造了一个完整的电影展示 App。细节十分完善，是一个经过完整设计的产品而非 Demo。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>热门文章 banner</li>
+<li>正在热映的电影</li>
+<li>即将上映的电影</li>
+<li>分类浏览</li>
+<li>电影搜索</li>
+<li>电影榜单：top250、北美票房榜、一周新电影榜、一周口碑榜</li>
+<li>电影详情：简介、剧照、预告片、电影短评</li>
+<li>影人详情：影人简介、相关作品、相册</li>
+<li>长按保存剧照
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'https://gitee.com/vaeyhc',
+    view: 'https://gitee.com/vaeyhc',
+    github: 'https://gitee.com/vaeyhc',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-mayandev-yesplaymusic" tabindex="-1">2.Mayandev/YesPlayMusic <a class="header-anchor" href="#_2-mayandev-yesplaymusic" aria-label="Permalink to &quot;2.Mayandev/YesPlayMusic&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5pmb7qkj20k00dc463.jpg" alt="Mayandev/YesPlayMusic" data-fancybox="gallery"></p>
+<p>高颜值的第三方网易云播放器</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>使用 Vue.js 全家桶开发</li>
+<li>🔴 网易云账号登录</li>
+<li>📺 MV 播放</li>
+<li>📃 支持歌词显示</li>
+<li>🚫🤝 无任何社交功能</li>
+<li>🌎️ 海外用户可直接播放（需要登录网易云账号）</li>
+<li>🔐 支持 UnblockNeteaseMusic，自动使用 QQ/酷狗/酷我音源替换变灰歌曲链接 （网页版不支持）</li>
+<li>⏭️ 支持 MediaSession API，可以使用系统快捷键操作上一首下一首
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'Mayandev/YesPlayMusic',
+    view: 'https://music.qier222.com/',
+    github: 'Mayandev/YesPlayMusic',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-mayandev-ikea-low-price" tabindex="-1">3.Mayandev/ikea-low-price <a class="header-anchor" href="#_3-mayandev-ikea-low-price" aria-label="Permalink to &quot;3.Mayandev/ikea-low-price&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg" alt="Mayandev/ikea-low-price" data-fancybox="gallery"></p>
+<p>一个宜家低价清单，数据每周自动同步。</p>
+<ArticleLink via="post" :work="{
+    title: 'Mayandev/ikea-low-price',
+    view: 'http://ikea-lp.netlify.app/',
+    github: 'Mayandev/ikea-low-price',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/10/open-source-by-api-app.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款开源的Todo List计划安排工具]]></title>
+            <link>https://appbeebee.com/posts/2023/10/open-source-web-todo-list.html</link>
+            <guid>https://appbeebee.com/posts/2023/10/open-source-web-todo-list.html</guid>
+            <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/10/open-source-web-todo-list.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款开源的todo-list计划安排工具" tabindex="-1">5款开源的Todo List计划安排工具 <a class="header-anchor" href="#_5款开源的todo-list计划安排工具" aria-label="Permalink to &quot;5款开源的Todo List计划安排工具&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-wintendev-rminder" tabindex="-1">1.WinTenDev/rminder <a class="header-anchor" href="#_1-wintendev-rminder" aria-label="Permalink to &quot;1.WinTenDev/rminder&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg" alt="WinTenDev/rminder" data-fancybox="gallery"></p>
+<p>这是一款开源的浏览器插件。这款插件应用将通知您喝水、纠正姿势、眨眼和伸展。因为我们在浏览时经常忘记做所有这些事情，这会影响您的健康。您可以自定义通知的时间间隔和通知的文本，您也可以关闭通知。</p>
+<ArticleLink via="post" :work="{
+    title: 'WinTenDev/rminder',
+    view: 'https://chromewebstore.google.com/detail/rminder-wintendev/kbchhfdklfddnnilmdffaeahipjcabll',
+    github: 'WinTenDev/rminder',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-hanziness-focustide" tabindex="-1">2.Hanziness/FocusTide <a class="header-anchor" href="#_2-hanziness-focustide" aria-label="Permalink to &quot;2.Hanziness/FocusTide&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbukfkg18j20k00dc0vs.jpg" alt="Hanziness/FocusTide" data-fancybox="gallery"></p>
+<p>免费、现代且开源的计时器应用程序，就在您的浏览器中。以前称为番茄钟。只需打开网页即可享受！您甚至可以自行托管它！</p>
+<h4 id="多种选择" tabindex="-1">多种选择 <a class="header-anchor" href="#多种选择" aria-label="Permalink to &quot;多种选择&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>按照您想要的方式设置您的日程安排</li>
+<li>切换日程视图、进度条或待办事项列表</li>
+<li>启用/禁用音频和/或桌面通知</li>
+<li>更改显示的计划项目数</li>
+<li>使用键盘控制计时器</li>
+<li>深色和浅色主题
+...</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'Hanziness/FocusTide',
+    view: 'https://focustide.app/',
+    github: 'Hanziness/FocusTide',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-manuelernestog-weektodo" tabindex="-1">3.manuelernestog/weektodo <a class="header-anchor" href="#_3-manuelernestog-weektodo" aria-label="Permalink to &quot;3.manuelernestog/weektodo&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbvd9mjmqj20k00dc421.jpg" alt="manuelernestog/weektodo" data-fancybox="gallery"></p>
+<p>WeekToDo 是一款免费的极简每周计划应用程序，专注于隐私。使用待办事项列表和日历安排您的任务和项目。适用于 Windows、Mac、Linux 或网页端。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>跨平台</li>
+<li>亮/暗模式切换</li>
+<li>自定义待办事项列表</li>
+<li>任务时间</li>
+<li>重复任务</li>
+<li>通知和提醒
+...</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'manuelernestog/weektodo',
+    view: 'https://weektodo.me/',
+    github: 'manuelernestog/weektodo',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-go-vikunja-frontend" tabindex="-1">4.go-vikunja/frontend <a class="header-anchor" href="#_4-go-vikunja-frontend" aria-label="Permalink to &quot;4.go-vikunja/frontend&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbvliw5x5j20k00dcjva.jpg" alt="go-vikunja/frontend" data-fancybox="gallery"></p>
+<p>用于组织您的生活的待办事项应用程序</p>
+<ArticleLink via="post" :work="{
+    title: 'go-vikunja/frontend',
+    view: 'https://vikunja.io/',
+    github: 'go-vikunja/frontend',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_5-alihandgrmnclr-vue-todoapp" tabindex="-1">5.alihandgrmnclr/Vue-TodoApp <a class="header-anchor" href="#_5-alihandgrmnclr-vue-todoapp" aria-label="Permalink to &quot;5.alihandgrmnclr/Vue-TodoApp&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbvp6pwudj20k00dcgs1.jpg" alt="alihandgrmnclr/Vue-TodoApp" data-fancybox="gallery"></p>
+<p>这是一个实时待办事项应用程序。您可以添加、编辑和删除您的待办事项。</p>
+<ArticleLink via="post" :work="{
+    title: 'alihandgrmnclr/Vue-TodoApp',
+    view: 'https://alihan-todoapp.netlify.app/',
+    github: 'alihandgrmnclr/Vue-TodoApp',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/10/open-source-web-todo-list.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[1款开源的超简约的音乐播放器]]></title>
+            <link>https://appbeebee.com/posts/2023/09/open-source-simple-music-player.html</link>
+            <guid>https://appbeebee.com/posts/2023/09/open-source-simple-music-player.html</guid>
+            <pubDate>Thu, 28 Sep 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5vwqqdjj20k00dcmzv.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/09/open-source-simple-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_1款开源的超简约的音乐播放器" tabindex="-1">1款开源的超简约的音乐播放器 <a class="header-anchor" href="#_1款开源的超简约的音乐播放器" aria-label="Permalink to &quot;1款开源的超简约的音乐播放器&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-mayandev-vue-music-player" tabindex="-1">1.Mayandev/vue-music-player <a class="header-anchor" href="#_1-mayandev-vue-music-player" aria-label="Permalink to &quot;1.Mayandev/vue-music-player&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld5vwqqdjj20k00dcmzv.jpg" alt="antrancs/maeve" data-fancybox="gallery"></p>
+<p>一个漂亮的音乐播放器，使用 vue 构建。通过选择本地音乐文件进行网页在线播放</p>
+<ArticleLink via="post" :work="{
+    title: 'Mayandev/vue-music-player',
+    view: 'https://mayandev.top/vue-music-player/',
+    github: 'Mayandev/vue-music-player',
+    via:'',
+    linkpan:'',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/09/open-source-simple-music-player.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld5vwqqdjj20k00dcmzv.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[3款开源的漂亮的活动/打卡/旅游类小程序]]></title>
+            <link>https://appbeebee.com/posts/2023/09/open-source-travl-wechatapp.html</link>
+            <guid>https://appbeebee.com/posts/2023/09/open-source-travl-wechatapp.html</guid>
+            <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/09/open-source-travl-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_3款开源的漂亮的活动-打卡-旅游类小程序" tabindex="-1">3款开源的漂亮的活动/打卡/旅游类小程序 <a class="header-anchor" href="#_3款开源的漂亮的活动-打卡-旅游类小程序" aria-label="Permalink to &quot;3款开源的漂亮的活动/打卡/旅游类小程序&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-jasongao97-natianyue" tabindex="-1">1.jasongao97/natianyue <a class="header-anchor" href="#_1-jasongao97-natianyue" aria-label="Permalink to &quot;1.jasongao97/natianyue&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld8r1awk9j20k00dc42m.jpg" alt="jasongao97/natianyue" data-fancybox="gallery"></p>
+<p>哪天约是一个帮助群约计划时间的微信小程序，用户可以指定范围建立群约并分享，参与者各自选择自己合适的时间，最终选出最好的时间点。本小程序首个版本上线于 2017 年，经过 3 年时间迭代更新，已积累 8 万用户。</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>原生微信小程序开发 + 云开发</li>
+<li>transition 与 animation 实现自然的 加载/警告/转场 动画</li>
+<li>云开发数据库实现报名结果实时推送</li>
+<li>云存储持久化用户头像、小程序码、Excel 表格</li>
+<li>微信开放接口实现文字安全检测、订阅消息推送
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'jasongao97/natianyue',
+    view: 'https://github.com/jasongao97/natianyue/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld8qncn9qj203c03ct8p.jpg',
+    github: 'jasongao97/natianyue',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_2-bugutech-bugu-sport" tabindex="-1">2.BuguTech/Bugu-Sport <a class="header-anchor" href="#_2-bugutech-bugu-sport" aria-label="Permalink to &quot;2.BuguTech/Bugu-Sport&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg" alt="BuguTech/Bugu-Sport" data-fancybox="gallery"></p>
+<p>不咕约球是一款以校园体育为主题的微信小程序，用户主要集中于学生群体，包括高校学生和中小学学生等。</p>
+<h4 id="特征-1" tabindex="-1">特征 <a class="header-anchor" href="#特征-1" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>约赛功能——发送邀请、协商比赛、跨校交流</li>
+<li>野球功能——查找场地、寻找球友、师生参与</li>
+<li>队伍功能——创建队伍、管理队伍、加入队伍</li>
+<li>认证功能——赛事认证、队伍认证、个人认证</li>
+<li>赛事功能——创建赛事、管理赛事、加入赛事</li>
+<li>个人功能——私信交流、信息验证、个人主页
+。。。</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'BuguTech/Bugu-Sport',
+    view: 'https://github.com/BuguTech/Bugu-Sport/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld93seua7j20by0by3zb.jpg',
+    github: 'BuguTech/Bugu-Sport',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" />
+<h2 id="_3-3075426724-wereading" tabindex="-1">3.3075426724/WeReading <a class="header-anchor" href="#_3-3075426724-wereading" aria-label="Permalink to &quot;3.3075426724/WeReading&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7tx1kj21400qo7qc.jpg" alt="3075426724/WeReading" data-fancybox="gallery"></p>
+<p>一款云开发的读书会，书友会小程序。采用腾讯提供的小程序云开发解决方案，无须服务器和域名</p>
+<p>书籍是人类进步的阶梯，在信息高度发达而浮躁的当下，静下心来读书成为都市人群的新趋势， 很多读书社团应运而生，那么通过小程序，把读书会搬到手机上，通过小程序了解最热门的书单和作家，可以每天组织阅读打卡和评比；书友会时常组织书友进行线下活动，那么通过小程序可以方便的搞定报名、签到、活动信息</p>
+<h4 id="特征-2" tabindex="-1">特征 <a class="header-anchor" href="#特征-2" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>活动发布：读书会组织者可以在小程序上发布活动信息，包括活动时间、地点、主题、参与人数等。</li>
+<li>活动报名：读书会成员可以在小程序上查看活动信息并进行报名，组织者可以实时查看报名情况。</li>
+<li>活动签到：在活动现场，组织者可以通过小程序进行签到，记录参与人员的出席情况。</li>
+<li>活动反馈：参与活动的读书会成员可以在小程序上进行反馈，包括对活动的评价、建议等。</li>
+</ul>
+<p>通过这些功能，读书会组织者可以更加便捷地组织活动，读书会成员也可以更加方便地参与活动和获取相关资料。
+本项目前后端完整代码包括公告通知，活动分类与列表，活动报名与评价，打卡项目列表，打卡排行与每日动态，我的活动报名，我的每日打卡；</p>
+<p>后台打卡项目管理，打卡记录管理与导出，后台活动与报名管理，报名审核与数据导出等功能，活动组织方可以自定义要填写的内容，比如姓名、性别、年龄，身份证、手机号等。
+。。。</p>
+<ArticleLink via="post" :work="{
+    title: '3075426724/WeReading',
+    view: 'https://github.com/3075426724/WeReading/',
+    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7syk3j208308eab0.jpg',
+    github: '3075426724/WeReading',
+    coveross: '',
+    beecode: '', //备用下载的文章 id
+    viewtit: '二维码预览',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/09/open-source-travl-wechatapp.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款开源的网页端头像合成工具]]></title>
+            <link>https://appbeebee.com/posts/2023/09/open-source-avatar-builder.html</link>
+            <guid>https://appbeebee.com/posts/2023/09/open-source-avatar-builder.html</guid>
+            <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hld36qp2qcj20k00dcjud.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/09/open-source-avatar-builder.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款基于vue开发的开源头像合成网站" tabindex="-1">5款基于vue开发的开源头像合成网站 <a class="header-anchor" href="#_5款基于vue开发的开源头像合成网站" aria-label="Permalink to &quot;5款基于vue开发的开源头像合成网站&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-wilmerterrero-avatartion" tabindex="-1">1.wilmerterrero/Avatartion <a class="header-anchor" href="#_1-wilmerterrero-avatartion" aria-label="Permalink to &quot;1.wilmerterrero/Avatartion&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld7jdpajrj20k00dcwic.jpg" alt="wilmerterrero/Avatartion" data-fancybox="gallery"></p>
+<p>一款Notion风格头像生成器</p>
+<ArticleLink via="post" :work="{
+    title: 'wilmerterrero/Avatartion',
+    view: 'https://www.avatartion.com/',
+    github: 'wilmerterrero/Avatartion',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_2-dapi-labs-react-nice-avatar" tabindex="-1">2.dapi-labs/react-nice-avatar <a class="header-anchor" href="#_2-dapi-labs-react-nice-avatar" aria-label="Permalink to &quot;2.dapi-labs/react-nice-avatar&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbga0qd0hj20k00dc0vs.jpg" alt="dapi-labs/react-nice-avatar" data-fancybox="gallery"></p>
+<ArticleLink via="post" :work="{
+    title: 'dapi-labs/react-nice-avatar',
+    view: 'https://nice-avatar.dapi.to/',
+    github: 'dapi-labs/react-nice-avatar',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_3-codennnn-vue-color-avatar" tabindex="-1">3.Codennnn/vue-color-avatar <a class="header-anchor" href="#_3-codennnn-vue-color-avatar" aria-label="Permalink to &quot;3.Codennnn/vue-color-avatar&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbga0qnxoj20k00dcwla.jpg" alt="Codennnn/vue-color-avatar" data-fancybox="gallery"></p>
+<p>这是一款矢量风格的头像生成器，您可以搭配不同的材质组件来生成您自己的个性化头像。</p>
+<p>您可能感兴趣的功能：</p>
+<ol>
+<li>可视化组件配置栏</li>
+<li>随机生成头像</li>
+<li>重做/撤消</li>
+<li>国际化</li>
+<li>批量生成多个头像</li>
+</ol>
+<ArticleLink via="post" :work="{
+    title: 'Codennnn/vue-color-avatar',
+    view: 'https://vue-color-avatar.leoku.dev/',
+    github: 'Codennnn/vue-color-avatar',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_4-fangpenlin-avataaars-generator" tabindex="-1">4.fangpenlin/avataaars-generator <a class="header-anchor" href="#_4-fangpenlin-avataaars-generator" aria-label="Permalink to &quot;4.fangpenlin/avataaars-generator&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbhk83vm3j20k00dc77o.jpg" alt="fangpenlin/avataaars-generator" data-fancybox="gallery"></p>
+<p>Avataaars 生成器是由Fang-Pen Lin开发的一个简单的基于 Web 的头像生成应用程序，原始头像由Pablo Stanley设计</p>
+<ArticleLink via="post" :work="{
+    title: 'fangpenlin/avataaars-generator',
+    view: 'https://getavataaars.com/',
+    github: 'fangpenlin/avataaars-generator',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<h2 id="_5-mayandev-notion-avatar" tabindex="-1">5.mayandev/notion-avatar <a class="header-anchor" href="#_5-mayandev-notion-avatar" aria-label="Permalink to &quot;5.mayandev/notion-avatar&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hld36qp2qcj20k00dcjud.jpg" alt="mayandev/notion-avatar" data-fancybox="gallery"></p>
+<p>一款用于制作概念风格头像的在线工具。提供设计稿</p>
+<h4 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-label="Permalink to &quot;特征&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>😉 16种脸型</li>
+<li>👃🏼 14个鼻子</li>
+<li>👄20张嘴</li>
+<li>👀 14只眼睛</li>
+<li>👁️16根眉毛</li>
+<li>🕶️14杯</li>
+<li>💇‍♀️ 58种发型</li>
+<li>🎅🏼 16 胡须</li>
+<li>💋13个面部细节</li>
+<li>💍14个配件</li>
+</ul>
+<ArticleLink via="post" :work="{
+    title: 'mayandev/notion-avatar',
+    view: 'https://notion-avatar.vercel.app/zh',
+    github: 'mayandev/notion-avatar',
+    coveross: '',
+    beecode: '',
+    viewtit: '访问网站',
+    wxwords: '',
+    }" />
+<p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/09/open-source-avatar-builder.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hld36qp2qcj20k00dcjud.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[5款免费的iPhone14/14pro手机设备渲染模型，提供备用下载]]></title>
+            <link>https://appbeebee.com/posts/2023/09/freebie-iphone14pro-mockups.html</link>
+            <guid>https://appbeebee.com/posts/2023/09/freebie-iphone14pro-mockups.html</guid>
+            <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2023/09/freebie-iphone14pro-mockups.html">文章涉及下载地址访问原站：yhc</a></h3></p><h1 id="_5款免费的iphone14-14pro手机设备渲染模型-提供备用下载" tabindex="-1">5款免费的iPhone14/14pro手机设备渲染模型，提供备用下载 <a class="header-anchor" href="#_5款免费的iphone14-14pro手机设备渲染模型-提供备用下载" aria-label="Permalink to &quot;5款免费的iPhone14/14pro手机设备渲染模型，提供备用下载&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_1-yusef-kazemi-apple-iphone-14-pro-mockup" tabindex="-1">1.Yusef Kazemi/Apple IPHONE 14 Pro Mockup <a class="header-anchor" href="#_1-yusef-kazemi-apple-iphone-14-pro-mockup" aria-label="Permalink to &quot;1.Yusef Kazemi/Apple IPHONE 14 Pro Mockup&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wxf7j20k00dcgsc.jpg" alt="Yusef Kazemi/Apple IPHONE 14 Pro Mockup" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Yusef Kazemi/Apple IPHONE 14 Pro Mockup',
+    view: 'https://www.figma.com/community/file/1149609863150426337',
+    github: '',
+    via:'https://dribbble.com/shots/19347489-Apple-IPHONE-14-Pro-Mockup',
+    linkpan:'https://pan.baidu.com/s/1NZWW2mJ3bdaMo7okpNjHyw?pwd=pu5d',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_2-artur-konariev-iphone-14-free-mockups-dynamic-island" tabindex="-1">2.Artur Konariev/iPhone 14 Free Mockups | Dynamic Island <a class="header-anchor" href="#_2-artur-konariev-iphone-14-free-mockups-dynamic-island" aria-label="Permalink to &quot;2.Artur Konariev/iPhone 14 Free Mockups | Dynamic Island&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wyo0j20k00dcgwh.jpg" alt="Artur Konariev/iPhone 14 Free Mockups | Dynamic Island" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Artur Konariev/iPhone 14 Free Mockups | Dynamic Island',
+    view: 'https://www.figma.com/community/file/1149751350366002562',
+    github: '',
+    via: 'https://dribbble.com/shots/19335704-iPhone-14-Free-Mockups-Dynamic-Island',
+    linkpan:'https://pan.baidu.com/s/1_CGT0SA74uaTfHU2noSUxA?pwd=xs4q',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_3-yash-ranpara-iphone-14-mockups-free" tabindex="-1">3.Yash Ranpara/iPhone 14 Mockups - Free <a class="header-anchor" href="#_3-yash-ranpara-iphone-14-mockups-free" aria-label="Permalink to &quot;3.Yash Ranpara/iPhone 14 Mockups - Free&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbmlwelx4j20k00dc44l.jpg" alt="Yash Ranpara/iPhone 14 Mockups - Free" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Yash Ranpara/iPhone 14 Mockups - Free',
+    view: 'https://www.figma.com/community/file/1155147792420627111',
+    github: '',
+    via: 'https://dribbble.com/shots/19479946-iPhone-14-Mockups-Free',
+    linkpan:'https://pan.baidu.com/s/1BZhbtIhPl5ErMD2DIG7z7A?pwd=d6d3',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_4-uiscore-free-iphone-14-pro-mockup" tabindex="-1">4.Uiscore/Free iPhone 14 Pro Mockup <a class="header-anchor" href="#_4-uiscore-free-iphone-14-pro-mockup" aria-label="Permalink to &quot;4.Uiscore/Free iPhone 14 Pro Mockup&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg" alt="Uiscore/Free iPhone 14 Pro Mockup" data-fancybox="gallery"></p>
+<p>格式：Figma</p>
+<ArticleLink via="post" :work="{
+    title: 'Uiscore/Free iPhone 14 Pro Mockup',
+    view: 'https://www.figma.com/community/file/1150116885670897326',
+    github: '',
+    via: 'https://dribbble.com/shots/19353283-Free-iPhone-14-Pro-Mockup',
+    linkpan:'https://pan.baidu.com/s/1E7kom5UG95uxgF6K376U0w?pwd=qe33',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" />
+<h2 id="_5-estudio-2c-free-iphone-14-pro-high-quality-mockup" tabindex="-1">5.Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP <a class="header-anchor" href="#_5-estudio-2c-free-iphone-14-pro-high-quality-mockup" aria-label="Permalink to &quot;5.Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP&quot;">&ZeroWidthSpace;</a></h2>
+<p><img src="https://fc.sinaimg.cn/large/6364aa43gy1hlbnxqthh8j20k00dctft.jpg" alt="Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP" data-fancybox="gallery"></p>
+<p>格式：PSD</p>
+<ArticleLink via="post" :work="{
+    title: 'Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP',
+    view: 'https://drive.google.com/drive/folders/1u4NGWr5i1e8Ul9kQTK-vM9f6AXSoB06r',
+    github: '',
+    via: 'https://www.behance.net/gallery/179844555/FREE-iPhone-14-pro-High-Quality-MOCKUP',
+    linkpan:'https://pan.baidu.com/s/1V5FrWqh7eVPzzbArz3Gnog?pwd=axxx',
+    coveross: '',
+    beecode: '',
+    viewtit: '官方下载',
+    wxwords: '',
+    }" /><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2023/09/freebie-iphone14pro-mockups.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg" length="0" type="image/jpg"/>
+        </item>
+    </channel>
+</rss>
