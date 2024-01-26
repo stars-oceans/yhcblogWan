@@ -26,12 +26,11 @@ export default defineConfig<ThemeConfig >({
             { text: 'Gitee', link: 'https://gitee.com/vaeyhc' }
         ],
         music: [ //音乐列表，音乐播放器参数在.vitepress/store/player.ts。封面和歌词不支持可自行按照文章教程修改
-        
             {
                 "id": 1,
                 "title": "枫",
                 "author": "周杰伦",
-                "url": "https://lx-sycdn.kuwo.cn/0a2266cd61693e10bf829bdfd200b1db/65b2074a/resource/n1/11/91/1235366685.mp3?from=vip",
+                "url": "/枫.mp3",
                 "pic": "https://img4.kuwo.cn/star/albumcover/120/32/88/1567952196.jpg",
                 "lrc": ""
             },
@@ -39,10 +38,34 @@ export default defineConfig<ThemeConfig >({
                 "id": 2,
                 "title": "蒲公英的约定",
                 "author": "周杰伦",
-                "url": "https://lx-sycdn.kuwo.cn/c2b94ca8daa7b4d3a05e859a2bdce803/65b20cb8/resource/n2/44/95/3773555154.mp3?from=vip",
+                "url": "/蒲公英的约定.mp3",
                 "pic": "https://img4.kuwo.cn/star/albumcover/120/32/88/1567952196.jpg",
                 "lrc": ""
             },
+            {
+                "id": 3,
+                "title": "退后",
+                "author": "周杰伦",
+                "url": "/退后.mp3",
+                "pic": "https://img4.kuwo.cn/star/albumcover/120/32/88/1567952196.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 4,
+                "title": "轨迹",
+                "author": "周杰伦",
+                "url": "/轨迹.mp3",
+                "pic": "https://img4.kuwo.cn/star/albumcover/120/32/88/1567952196.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 4,
+                "title": "说好的幸福呢",
+                "author": "周杰伦",
+                "url": "/说好的幸福呢.mp3",
+                "pic": "https://img4.kuwo.cn/star/albumcover/120/32/88/1567952196.jpg",
+                "lrc": ""
+            }
         ],
         // banner: [ //主页轮播，不需要就注释掉
         //     {

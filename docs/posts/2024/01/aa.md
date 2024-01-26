@@ -8,7 +8,7 @@ categories:
  - vueJS
 tags:
  - 白板
- - 绘画
+ - 绘画1111111111
 description:  可以让用户通过绘制软件图像并利用AI将其变为真实可用的代码。
 ---
 # Vue
