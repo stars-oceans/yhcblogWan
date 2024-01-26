@@ -7,7 +7,7 @@ coveross: https://fc.sinaimg.cn/large/6364aa43gy1hlxgepmlgvj20k00dctkd.jpg
 categories:
  - 设计
 tags:
- - 中文字体
+ - 中文字体22
 description:  用于海报、视频设计等，均可商业使用。
 ---
 # 7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体
