@@ -59,7 +59,7 @@ export default defineConfig<ThemeConfig >({
                 "lrc": ""
             },
             {
-                "id": 4,
+                "id": 5,
                 "title": "说好的幸福呢",
                 "author": "周杰伦",
                 "url": "/说好的幸福呢.mp3",
