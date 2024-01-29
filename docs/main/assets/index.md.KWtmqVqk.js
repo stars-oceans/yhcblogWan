@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.WW8f2_VW.js";const f=JSON.parse('{"title":"首页","description":"","frontmatter":{"index":true,"title":"首页","aside":false,"sidebar":true},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),r={name:"index.md"};function n(s,i,d,o,c,p){return a(),t("div")}const l=e(r,[["render",n]]);export{f as __pageData,l as default};
