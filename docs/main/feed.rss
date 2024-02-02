@@ -4,7 +4,7 @@
         <title>yhc</title>
         <link>https://appbeebee.com</link>
         <description>前端技术分享博客</description>
-        <lastBuildDate>Fri, 02 Feb 2024 02:00:50 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Feb 2024 03:27:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh</language>
@@ -402,6 +402,57 @@
 <p><img src="https://i.postimg.cc/hvhfCh57/shili.jpg" alt="mlogclub/bbs-go" data-fancybox="gallery"></p>
 <p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/02/11.uniapp侧边导航.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
             <enclosure url="https://i.postimg.cc/d1Srt62t/uniapp.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[UniApp 请求封装]]></title>
+            <link>https://appbeebee.com/posts/2024/02/12.uniapp 请求封装.html</link>
+            <guid>https://appbeebee.com/posts/2024/02/12.uniapp 请求封装.html</guid>
+            <pubDate>Fri, 02 Feb 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="https://i.postimg.cc/vTg91nh7/uniapp1.jpg" alt="" /><p><h3><a href="https://appbeebee.com/posts/2024/02/12.uniapp 请求封装.html">文章涉及下载地址访问原站：yhc</a></h3></p><h2 id="_1-工具函数层" tabindex="-1">1.工具函数层 <a class="header-anchor" href="#_1-工具函数层" aria-label="Permalink to &quot;1.工具函数层&quot;">&ZeroWidthSpace;</a></h2>
+<div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// api.js</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> BASE_URL</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'http://localhost:3000'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> http</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">method</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">header</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {}) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Promise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">	  // 示例</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	  header.aaaaaaaaaaaaaaaaaaaaaaa </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '1111111111111111111'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	  </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    uni.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">request</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      url: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BASE_URL</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> url,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      method: method </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">||</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'GET'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      data: data,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      header: header,</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      success</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">		  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(res,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'res========='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (res.statusCode </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 200</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(res.data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(res.data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      fail</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">err</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(err);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="_2-接口管理层" tabindex="-1">2.接口管理层 <a class="header-anchor" href="#_2-接口管理层" aria-label="Permalink to &quot;2.接口管理层&quot;">&ZeroWidthSpace;</a></h2>
+<div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {http} </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> './http.js'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/**</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * 测试</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">@param</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> {Object}</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> data</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> */</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> login</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'=====data'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">	// 加请求头示例  文件传输头</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">	 const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> header</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">      "Content-Type"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"multipart/form-data"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	  };</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> http</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/users'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'get'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, data, header);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><h3 style="color:#3451b2"><a href="https://appbeebee.com/posts/2024/02/12.uniapp 请求封装.html">文章涉及下载地址访问原站：yhc</a></h3></p>]]></content:encoded>
+            <enclosure url="https://i.postimg.cc/vTg91nh7/uniapp1.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Vuex映射方法mapState、mapGetters、mapMutations、mapActions的使用]]></title>
@@ -1241,7 +1292,11 @@ namespace命名空间</p>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> http</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        method: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'post'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        url: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/users/checkLogin'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        data,</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // 配置请求头</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        headers : {</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">         "Content-Type"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"multipart/form-data"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	    };</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    })</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
@@ -1635,7 +1690,7 @@ namespace命名空间</p>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  };</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
-</div><h2 id="传输需要配置响应头" tabindex="-1">传输需要配置响应头 <a class="header-anchor" href="#传输需要配置响应头" aria-label="Permalink to &quot;传输需要配置响应头&quot;">&ZeroWidthSpace;</a></h2>
+</div><h2 id="传输需要配置请求头" tabindex="-1">传输需要配置请求头 <a class="header-anchor" href="#传输需要配置请求头" aria-label="Permalink to &quot;传输需要配置请求头&quot;">&ZeroWidthSpace;</a></h2>
 <h1 id="对象转为-formdata-文件上传给后端" tabindex="-1">对象转为 formData 文件上传给后端 <a class="header-anchor" href="#对象转为-formdata-文件上传给后端" aria-label="Permalink to &quot;对象转为 formData 文件上传给后端&quot;">&ZeroWidthSpace;</a></h1>
 <div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> data </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'andy'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, age: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'18'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, file: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> };</span></span>
 <span class="line"></span>
