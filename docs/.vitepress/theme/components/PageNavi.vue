@@ -86,7 +86,28 @@ const choose = (e: string) => {
 
 </script>
 
-<style scoped>
+<style>
+
+/*定义整个滚动条高宽及背景：高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width:1px;
+    /* background-color:#F5F5F5; */
+}
+/*定义滚动条轨道：内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    /* background-color:#F5F5F5; */
+}
+/*定义滑块：内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius:10px;
+    background-color:#138ac5;
+}
+
+</style>
+<style scoped >
 .h4 {
 
   margin: 0;
@@ -119,16 +140,24 @@ const choose = (e: string) => {
   transform: translateX(0px);
   transition: .3s;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .mainnavi.left {
   position: relative;
   margin-top: 20px;
   /* background-color: var(--vp-c-gray-1); */
   width: 80%;
-  border-radius: 16px;
+  /* border-radius: 16px; */
+
   font-size: 14px;
   z-index: 1000;
   min-height: calc(100vh - 200px);
+
+  max-height: 60vh;
+  overflow: auto;
+overflow-x: hidden;
 
   .ul {
 
