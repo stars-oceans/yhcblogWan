@@ -91,7 +91,8 @@ const choose = (e: string) => {
 /*定义整个滚动条高宽及背景：高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
 {
-    width:1px;
+    width:1px !important;
+    height: 8px;
     /* background-color:#F5F5F5; */
 }
 /*定义滚动条轨道：内阴影+圆角*/
@@ -102,8 +103,8 @@ const choose = (e: string) => {
 /*定义滑块：内阴影+圆角*/
 ::-webkit-scrollbar-thumb
 {
-    border-radius:10px;
-    background-color:#138ac5;
+    border-radius:6px;
+    background-color:#A8B1FF;
 }
 
 </style>

@@ -106,7 +106,7 @@ export default defineConfig<ThemeConfig >({
             }
         },
         outlineTitle: '目录',
-        outline :[1,6],
+        outline :[1,2],
         // 相关链接
         socialLinks: [
             // {
