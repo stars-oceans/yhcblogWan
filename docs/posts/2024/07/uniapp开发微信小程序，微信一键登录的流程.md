@@ -6,7 +6,7 @@ cover: https://th.bing.com/th/id/R.08a3af2a4085b50b5a21895639b70341?rik=o8G9X9Zg
 coveross: https://th.bing.com/th/id/R.08a3af2a4085b50b5a21895639b70341?rik=o8G9X9ZgmGT%2fxg&riu=http%3a%2f%2fwww.info110.com%2fwp-content%2fuploads%2f2020%2f12%2f20201218_5fdc67f249d56.jpg&ehk=%2bErY5hIYUFFPHCO4TE5rtdgbpn%2fNoICThdsblukwTHs%3d&risl=&pid=ImgRaw&r=0
 # 分类
 categories:
- - Uniapp
+ - UniApp
 tags:
  - uniapp开发微信小程序，微信一键登录的流程
 description: uniapp开发微信小程序，微信一键登录的流程
